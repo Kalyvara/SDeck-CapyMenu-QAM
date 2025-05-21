@@ -1,0 +1,14 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+:root {
+    --capyQam-itemHighlight-bg:
+        linear-gradient(
+            -45deg, var(--capyQam-Custom-itemHighlight-bg-c1) 0%, var(--capyQam-Custom-itemHighlight-bg-c1) 33%,
+            var(--capyQam-Custom-itemHighlight-bg-c2) 33%, var(--capyQam-Custom-itemHighlight-bg-c2) 66%,
+            var(--capyQam-Custom-itemHighlight-bg-c3) 66%, var(--capyQam-Custom-itemHighlight-bg-c3) 100%);
+    
+    /* if user enables animation toggle */
+    
+}

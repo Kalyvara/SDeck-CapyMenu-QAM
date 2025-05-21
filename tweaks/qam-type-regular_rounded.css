@@ -1,0 +1,32 @@
+:root {
+    --capyQam-tweakOn-sidebarLayout-collapseTop-tl-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseTop-bl-radius: 20px;
+    --capyQam-tweakOn-sidebarLayout-collapseTop-tr-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseTop-br-radius: 0;
+
+    --capyQam-tweakOn-sidebarLayout-collapseBottom-tl-radius: 20px;
+    --capyQam-tweakOn-sidebarLayout-collapseBottom-bl-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseBottom-tr-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseBottom-br-radius: 0;
+
+    --capyQam-tweakOn-sidebarLayout-collapseCenter-tl-radius: 20px;
+    --capyQam-tweakOn-sidebarLayout-collapseCenter-bl-radius: 20px;
+    --capyQam-tweakOn-sidebarLayout-collapseCenter-tr-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseCenter-br-radius: 0;
+
+    --capyQam-tweakOn-sidebarLayout-standard-tl-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-standard-bl-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-standard-tr-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-standard-br-radius: 0;
+
+    --capyQam-tweakOn-notifExtend-qamType-tl-radius: 12px;
+    --capyQam-tweakOn-notifExtend-qamType-bl-radius: 12px;
+}
+
+/* sidebar */
+._2z5NLWXYyRbqbrFDD718Y_ {
+    border-top-left-radius: var(--capyQam-tweakOn-qamType-regular-tl-radius);
+    border-bottom-left-radius: var(--capyQam-tweakOn-qamType-regular-bl-radius);
+    border-top-right-radius: var(--capyQam-tweakOn-qamType-regular-tr-radius);
+    border-bottom-right-radius: var(--capyQam-tweakOn-qamType-regular-br-radius);
+}

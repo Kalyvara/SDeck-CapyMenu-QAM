@@ -1,0 +1,302 @@
+/* ----------
+CapyMenu QAM
+v3.0
+By Capybara / Kalyvara
+---------- */
+
+:root {
+    /* Fallbacks for togglable gradients */
+    --capyQam-itemHighlight-bg-anim: none;
+}
+
+/* ------
+Non-highlighted Foreground Elements (text, SVGs, ...)
+------ */
+
+    /* ------
+    in bulk:
+    ------ */
+
+    /* qam global setting */ .BasicUI._3DHXr5yONRuNdsrNwBiEm5._-6ESh2T8Qc_pZPgOLBhZJ,
+    /* page header */ ._1IigUZ3GHaZS2Y-3V3T2rT, ._1JWa53jDD1iJjo9tVuAGCH,
+    /* selectable item label */ ._3jMlJm4PQCA8SfNlUR99Fo, .DialogLabel, .DialogLabelStrong,
+    /* selectable item sublabel */ ._1W1to_azoBRG95oNAFpf9Q._1W1to_azoBRG95oNAFpf9Q,
+
+    /* notif page -> item label */ ._3-H47wPl1Ng3lh7xGZOPIg ._18PwvOcpWfW3M8j2-bEPPJ, ._3V6804k2yutEiF6IWg8axH ._18PwvOcpWfW3M8j2-bEPPJ,
+    /* notif page -> item icon */ ._3-H47wPl1Ng3lh7xGZOPIg ._2F0wqsu2mqsHxBSJcu1sPJ, ._3V6804k2yutEiF6IWg8axH ._2F0wqsu2mqsHxBSJcu1sPJ,
+    /* notif page -> item timestamp */ ._3-H47wPl1Ng3lh7xGZOPIg ._26rvbcKFCQjLKx-pD7BhvY, ._3V6804k2yutEiF6IWg8axH ._26rvbcKFCQjLKx-pD7BhvY, ._3q7nNrnxIUlXvIZkxi5mom, ._1N5mcKPHLaAfi4MA2HzjuQ,
+    /* notif page -> item content */ ._3-H47wPl1Ng3lh7xGZOPIg ._3fUrGm-WHq3qxIpSqRZDgc, ._3V6804k2yutEiF6IWg8axH ._3fUrGm-WHq3qxIpSqRZDgc,
+    /* notif page -> download */
+        ._2h6KD6p6y4vIgO2Toxx-_K ._2MGSmn9lIFnmLVIX49POSx, ._3oKFhPrh1lbp-WtA72Q2Yi ._2MGSmn9lIFnmLVIX49POSx,
+        ._2h6KD6p6y4vIgO2Toxx-_K ._7XKFnSNjW_tHfyxaezoD3, ._3oKFhPrh1lbp-WtA72Q2Yi ._7XKFnSNjW_tHfyxaezoD3,
+        ._2h6KD6p6y4vIgO2Toxx-_K ._26v9mHAi56x63OwY-jxett, ._3oKFhPrh1lbp-WtA72Q2Yi ._26v9mHAi56x63OwY-jxett,
+        ._2h6KD6p6y4vIgO2Toxx-_K ._3hEeummFKRey8l5VXxZwxz, ._3oKFhPrh1lbp-WtA72Q2Yi ._3hEeummFKRey8l5VXxZwxz,
+        ._2h6KD6p6y4vIgO2Toxx-_K ._2auM-VHPU-KKomAWyuWrSV, ._3oKFhPrh1lbp-WtA72Q2Yi ._2auM-VHPU-KKomAWyuWrSV,
+    /* notif page -> unread message */ ._3oKFhPrh1lbp-WtA72Q2Yi .h-lNlCUnCRbIcn38-Oqaw,
+    /* friends page -> header */ #QuickAccess-Menu .GamepadMode.friendlist .TabPanelHeader,
+
+
+    /* performance page -> current charge */ ._3S2zxH0cE9IyJOsA7lQDTr,
+    /* performance page -> charge ETA */ ._2jtM9ZI0ABriE59EG4R-3Q ._3ISN8xWWZhzwb_bN-ZujSz,
+    /* performance page -> "Using custom performance profile" */ ._1TDxzQ8IelFBl5dG7C51Te
+    {
+        color: var(--capyQam-main-fg);
+    }
+    /* notif page -> wishlist sale price */ ._30fVm4Rsel-4nUKEiPJgz9 ._3hEeummFKRey8l5VXxZwxz span {
+        color: var(--capyQam-main-fg) !important;
+    }
+
+    /* ------
+    requires special styling:
+    ------ */
+
+    /* selectable item sublabel */ ._1W1to_azoBRG95oNAFpf9Q {
+        opacity: .60;
+    }
+
+/* ------
+Highlighted Elements
+------ */
+
+    /* ------
+    Backgrounds
+    ------ */
+
+        /* regular selectable items
+        anim disabled: _2NVMbdV4wBIACWgwBU2kyz
+        */
+        .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus,
+        .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin {
+            background: var(--capyQam-itemHighlight-bg);
+            animation: var(--capyQam-itemHighlight-bg-anim);
+        }
+
+        /* items in friends page
+        anim disabled: ItemFocusAnim-darkGrey, ItemFocusAnim-grey, _1ncZnsqppJMlaMgUBM6Rwz
+        */
+        .favoriteElement.gpfocuswithin,
+        .friendStatusHover.gpfocuswithin,
+        .friendGroup .groupName.GamepadMode.gpfocus, .GamepadMode .friendGroup .groupName.gpfocus,
+        .ChatRoomListGroupItem.GamepadMode.gpfocus, .GamepadMode .ChatRoomListGroupItem.gpfocus,
+        ._3-PbkfKv5iI-_arCCwDSNK ._356i2cRNfZnSGd79JSqaRr.gpfocus {
+            background: var(--capyQam-itemHighlight-bg);
+            animation: var(--capyQam-itemHighlight-bg-anim);
+            
+        }
+        .groupHeaderContainer.gpfocuswithin .SortByRecent.gpfocuswithin {
+            background: var(--capyQam-itemHighlight-bg) !important;
+            animation: var(--capyQam-itemHighlight-bg-anim) !important;
+        }
+
+        /* notif page items
+        no pre-existing animation
+        */
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus,
+        .BasicUI ._30fVm4Rsel-4nUKEiPJgz9:hover,
+        .BasicUI ._30fVm4Rsel-4nUKEiPJgz9.gpfocus,
+        ._2h6KD6p6y4vIgO2Toxx-_K.gpfocus,
+        ._3oKFhPrh1lbp-WtA72Q2Yi.gpfocus {
+            background: var(--capyQam-itemHighlight-bg);
+            animation: var(--capyQam-itemHighlight-bg-anim);
+        }
+
+        /* soundtracks seekbar
+        anim disabled: Dv2ikGKpM6vv7qJZ-q63Q
+        */
+        ._3DLyrg7YP5cNP9HKda62qd .P_NVQ7KUOfqYaa_SwWOpS.gpfocuswithin {
+            background: var(--capyQam-itemHighlight-bg);
+            animation: var(--capyQam-itemHighlight-bg-anim);
+        }
+    
+    /* ------
+    Foreground Elements
+    ------ */
+
+        /* regular selectable items */ .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus ._3jMlJm4PQCA8SfNlUR99Fo, .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin ._3jMlJm4PQCA8SfNlUR99Fo,
+        .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin .DialogLabel, .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin .DialogLabelStrong,
+        .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus ._1W1to_azoBRG95oNAFpf9Q, .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin ._1W1to_azoBRG95oNAFpf9Q,
+        /* SVGs & slider ticks */ .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus, .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin, .eKmEXJCm_lgme24Fp_HWt._2HuzvKQ2QMUJ-JJOeApaF1:not(.aIeh3X5T2M074RLW1qn6_):hover
+        {
+            color: var(--capyQam-main-fg-hl);
+        }
+        
+        /* performance page -> charge indicators */
+            .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus ._3S2zxH0cE9IyJOsA7lQDTr, .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin ._3S2zxH0cE9IyJOsA7lQDTr,
+            .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus ._2jtM9ZI0ABriE59EG4R-3Q ._3ISN8xWWZhzwb_bN-ZujSz, .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin ._2jtM9ZI0ABriE59EG4R-3Q ._3ISN8xWWZhzwb_bN-ZujSz,
+            .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover, .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus,
+        
+        /* notif page -> item title */ .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover ._3-H47wPl1Ng3lh7xGZOPIg ._18PwvOcpWfW3M8j2-bEPPJ,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover ._3V6804k2yutEiF6IWg8axH ._18PwvOcpWfW3M8j2-bEPPJ,
+        /* notif page -> item icon */ .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover ._3-H47wPl1Ng3lh7xGZOPIg ._2F0wqsu2mqsHxBSJcu1sPJ,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover ._3V6804k2yutEiF6IWg8axH ._2F0wqsu2mqsHxBSJcu1sPJ,
+        /* notif page -> item timestamp */ .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover ._3-H47wPl1Ng3lh7xGZOPIg ._26rvbcKFCQjLKx-pD7BhvY,
+        ._30fVm4Rsel-4nUKEiPJgz9.gpfocus.gpfocuswithin ._3q7nNrnxIUlXvIZkxi5mom, ._30fVm4Rsel-4nUKEiPJgz9.gpfocus.gpfocuswithin ._1N5mcKPHLaAfi4MA2HzjuQ,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover ._3V6804k2yutEiF6IWg8axH ._26rvbcKFCQjLKx-pD7BhvY,
+        /* notif page -> item content */ .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover ._3-H47wPl1Ng3lh7xGZOPIg ._3fUrGm-WHq3qxIpSqRZDgc,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover ._3V6804k2yutEiF6IWg8axH ._3fUrGm-WHq3qxIpSqRZDgc,
+        /* notif page -> item title */ .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus ._3-H47wPl1Ng3lh7xGZOPIg ._18PwvOcpWfW3M8j2-bEPPJ,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus ._3V6804k2yutEiF6IWg8axH ._18PwvOcpWfW3M8j2-bEPPJ,
+        /* notif page -> item icon */ .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus ._3-H47wPl1Ng3lh7xGZOPIg ._2F0wqsu2mqsHxBSJcu1sPJ,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus ._3V6804k2yutEiF6IWg8axH ._2F0wqsu2mqsHxBSJcu1sPJ,
+        /* notif page -> item timestamp */ .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus ._3-H47wPl1Ng3lh7xGZOPIg ._26rvbcKFCQjLKx-pD7BhvY,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus ._3V6804k2yutEiF6IWg8axH ._26rvbcKFCQjLKx-pD7BhvY,
+        /* notif page -> item content */ .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus ._3-H47wPl1Ng3lh7xGZOPIg ._3fUrGm-WHq3qxIpSqRZDgc,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus ._3V6804k2yutEiF6IWg8axH ._3fUrGm-WHq3qxIpSqRZDgc,
+        /* notif page -> unread message */ ._3oKFhPrh1lbp-WtA72Q2Yi.gpfocus.gpfocuswithin .h-lNlCUnCRbIcn38-Oqaw, ._3oKFhPrh1lbp-WtA72Q2Yi.gpfocus.gpfocuswithin ._2auM-VHPU-KKomAWyuWrSV svg,
+        /* notif page -> download */
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._2h6KD6p6y4vIgO2Toxx-_K ._2MGSmn9lIFnmLVIX49POSx,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._3oKFhPrh1lbp-WtA72Q2Yi ._2MGSmn9lIFnmLVIX49POSx,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._2h6KD6p6y4vIgO2Toxx-_K ._7XKFnSNjW_tHfyxaezoD3,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._3oKFhPrh1lbp-WtA72Q2Yi ._7XKFnSNjW_tHfyxaezoD3,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._2h6KD6p6y4vIgO2Toxx-_K ._26v9mHAi56x63OwY-jxett,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._3oKFhPrh1lbp-WtA72Q2Yi ._26v9mHAi56x63OwY-jxett,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._2h6KD6p6y4vIgO2Toxx-_K ._3hEeummFKRey8l5VXxZwxz,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._3oKFhPrh1lbp-WtA72Q2Yi ._3hEeummFKRey8l5VXxZwxz,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._2h6KD6p6y4vIgO2Toxx-_K ._2auM-VHPU-KKomAWyuWrSV,
+            ._30fVm4Rsel-4nUKEiPJgz9.gpfocus ._3oKFhPrh1lbp-WtA72Q2Yi ._2auM-VHPU-KKomAWyuWrSV,
+        /* notif page -> wishlist sale */ ._30fVm4Rsel-4nUKEiPJgz9.gpfocus.gpfocuswithin ._3hEeummFKRey8l5VXxZwxz span,
+        
+        /* soundtracks page -> seekbar */ .P_NVQ7KUOfqYaa_SwWOpS.gpfocuswithin
+        /* + friends page elements -> see qam_friends-page.css */
+        {
+            color: var(--capyQam-main-fg-hl) !important;
+        }
+
+/* ------
+Additional styling
+------ */
+
+    /* item separator */
+    .eKmEXJCm_lgme24Fp_HWt.GxgIyq8R5xTOeu4ftGrgX::after {
+        background: var(--capyQam-item-separator);
+    }
+    ._2qO6xEyhSosAXsHOje_EZQ:not(._1sOglhndXBNeMDgnPMACdB)>div:not(:focus)+div:not(:focus):before, ._2qO6xEyhSosAXsHOje_EZQ>div:not(:hover)+div:not(:hover):before, ._2qO6xEyhSosAXsHOje_EZQ>div:not(:hover)+div._1W8TyPEajY1iakmuEHRHxe:before {
+        border-color: var(--capyQam-item-separator);
+    }
+
+    /* disabled item */
+    .eKmEXJCm_lgme24Fp_HWt.aIeh3X5T2M074RLW1qn6_ ._3jMlJm4PQCA8SfNlUR99Fo {
+        color: var(--capyQam-main-fg);
+        opacity: .5;
+    }
+
+    /* remote play page */
+        /* controller separator */
+        ._2GCG4SFBjYBmu3ncw6iOMj ._1jLAbUrCnF00eLvceXM7Fj {
+            background: var(--capyQam-main-fg);
+        }
+        .gpfocus ._2GCG4SFBjYBmu3ncw6iOMj ._1jLAbUrCnF00eLvceXM7Fj {
+            background: var(--capyQam-main-fg-hl);
+        }
+
+    /* notif page */
+        /* new notif marker */
+        .-B93GaGXJf0lPTNh66m4i svg,
+        ._1pIhbqWsrCVPaGGYc6fT-H svg {
+            color: var(--capyQam-notifMark);
+            width: 8px;
+            height: 8px;
+        }
+        .-B93GaGXJf0lPTNh66m4i,
+        ._1pIhbqWsrCVPaGGYc6fT-H {
+            filter: none;
+        }
+
+    /* performance page */
+        /* charge icon outline */
+        ._1BT6irB3bcjAbUZXK88VYS svg path[d="M5 17.5L9.5 10L9.5 14.5L14 14.5L9.5 22L9.5 17.5L5 17.5Z"] {
+            fill: #000;
+            stroke: #fff;
+        }
+
+    /* friends page */
+        /* friends page */
+        /* weird gradient background */
+        .GamepadMode.friendlist {
+            background: none;
+            border: none;
+        }
+
+        /* header, tabs border */
+        ._3-PbkfKv5iI-_arCCwDSNK ._356i2cRNfZnSGd79JSqaRr {
+            border-top: none;
+        }
+        .GamepadMode.friendlist.gpfocuswithin .FriendsListSteamDeckTopSection {
+            box-shadow: none;
+        }
+
+        /* chatroom avatar */
+        .ChatRoomGroupAvatar.GamepadMode, .GamepadMode .ChatRoomGroupAvatar, .ChatRoomMultiFriendAvatar.GamepadMode, .GamepadMode .ChatRoomMultiFriendAvatar {
+            border: none;
+        }
+        .ChatRoomGroupAvatar {
+            background: var(--capyQam-itemHighlight-bg);
+        }
+        .ChatRoomGroupAvatar_initials {
+            background: var(--capyQam-main-fg-hl);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
+
+    /* Decky page */
+        /* Decky update notif */
+        ._3LM_ZckJp5yJYrL1OI_WqW div[style="position: absolute; top: -5px; right: -5px; height: 10px; width: 10px; background: orange; border-radius: 50%;"] {
+            background: var(--capyQam-notifMark) !important;
+        }
+
+        /* CSS Loader -> update notif */
+        .CssLoader_ThemeBrowser_SingleItem_NotifBubble {
+            /* background: linear-gradient(to left, var(--capyQam-notifMark), transparent) !important; */
+            background: linear-gradient(45deg, transparent 49%, var(--capyQam-notifMark) 50%) !important;
+            z-index: 0 !important;
+        }
+
+/* ---
+Untested (no means to test) / May be deprecated / May not work
+--- */
+
+/* performance page */
+    /* profile used text */
+    .perf_PerfProfileInfo_1UqP6 .perf_SubHeading_2C4wP .perf_Text_3gY4m {
+        color: var(--capyQam-main-fg);
+    }
+    /* performance profile text */
+    .perf_PerfProfileInfoBasic_1nXii {
+        color: var(--capyQam-main-fg);
+    }
+
+
+/* notif page -> No new notifications text */
+.quickaccesscontrols_EmptyNotifications_1g1_n {
+    color: var(--capyQam-main-fg);
+    filter: opacity(0.6);
+}
+
+/* notif page -> Pinned label e.g. new item in inventory */
+.notificationcontent_StandardTemplate_5HZT7.gpfocus, .notificationcontent_PinnedTemplate_1X-O1.gpfocus {
+    background: var(--capyQam-itemHighlight-bg);
+    animation: var(--capyQam-itemHighlight-bg-anim);
+}
+
+/* notif page -> Achievements */
+    .appdetailsachievementssection_Featured_1j_gj .appdetailsachievementssection_TextSection_1s_9c .appdetailsachievementssection_Name_39Y01 {
+        color: var(--capyQam-main-fg);
+    }
+    .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .appdetailsachievementssection_Featured_1j_gj .appdetailsachievementssection_TextSection_1s_9c .appdetailsachievementssection_Name_39Y01 {
+        color: var(--capyQam-main-fg);
+    }
+    .quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications .notificationcontent_StandardTemplate_5HZT7 .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_TextSection_1s_9c /* achievement title, no highlight */ {
+        color: var(--capyQam-main-fg);
+    }
+    .quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications .notificationcontent_StandardTemplate_5HZT7 .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_Desc_2gLHb /* achievement description, no highlight */ {
+        color: var(--capyQam-main-fg);
+    }
+    .quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications.gpfocuswithin .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_TextSection_1s_9c /* achievement title, highlight */ {
+        color: var(--capyQam-main-fg-hl);
+    }
+    .quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications.gpfocuswithin .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_Desc_2gLHb /* achievement description, highlight */ {
+        color: var(--capyQam-main-fg-hl);
+    }

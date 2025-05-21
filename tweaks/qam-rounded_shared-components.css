@@ -1,0 +1,126 @@
+
+:root {
+    --capyQam-sidebarIndicator-position: 42px;
+}
+
+/* ---
+Content Panel
+--- */
+._2BB6uf--jFaAmdnwLOqMU7 {
+    margin-top: 4px; margin-bottom: 4px;
+}
+
+/* ---
+Top bar (in-game)
+--- */
+._1E_SL1bTibeQ3PQRBZoS_-._2mRo586DqtPuSdxT1VRirS {
+    border-top-left-radius: 20px; border-bottom-left-radius: 20px;
+}
+
+/* ---
+Sidebar
+--- */
+
+/* Decky Page Header overflow correction due to added padding on sidebar */
+._34nl5vUoFCDYYnmHNL7axB>div {
+    font-size: 0.9em;
+}
+
+._2z5NLWXYyRbqbrFDD718Y_ {
+    padding-top: 16px; padding-bottom: 16px;
+    padding-left: 4px; padding-right: 4px;
+}
+._3Ag1wVkrYOaZyOUNWGLf3Y {
+    margin-top: 4px; margin-bottom: 4px;
+}
+
+.BasicUI._3DHXr5yONRuNdsrNwBiEm5._-6ESh2T8Qc_pZPgOLBhZJ {
+    /*
+    QAM panel outline
+    border-top: 2px solid blue; border-bottom: 2px solid blue; border-left: 2px solid blue;
+    */
+    margin-bottom: 4px;
+}
+
+/* sidebar items */
+._1S76C3gQf4oOTbLdTMVH0m._2QHMua1-KysYKpszTPAW_O,
+.quickaccessmenu_Tab_1S76C.gpfocus 
+{
+    border-radius: 50px;
+}
+
+/* remove sidebar animation to prevent clipping */
+._1S76C3gQf4oOTbLdTMVH0m._2QHMua1-KysYKpszTPAW_O.gpfocus {
+    clip-path: none;
+    transform: scale(1);
+}
+
+/* ---
+Content Page Header
+--- */
+
+._34nl5vUoFCDYYnmHNL7axB::after,
+._3ys3Sy3ff2qe7MBpyd1Qru::after {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+._34nl5vUoFCDYYnmHNL7axB::before,
+._3ys3Sy3ff2qe7MBpyd1Qru::before {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* header buttons */
+.V0cr-SAnDhzAWmPZdrJQJ ._1QO7bWVxsVONFdHDAJGCtF ._34nl5vUoFCDYYnmHNL7axB button,
+.GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton, .GamepadMode.friendlist .TabPanelHeader .AddFriendButton, .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+    border-radius: 20px;
+}
+
+ /* ------
+    Selectable Items
+    ------ */
+
+        /* regular selectable items
+        anim disabled: _2NVMbdV4wBIACWgwBU2kyz
+        */
+        .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX,
+        .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX {
+            border-radius: 12px;
+        }
+
+        /* items in friends page
+        anim disabled: ItemFocusAnim-darkGrey, ItemFocusAnim-grey, _1ncZnsqppJMlaMgUBM6Rwz
+        */
+        .favoriteElement,
+        .friendStatusHover,
+        .friendGroup .groupName.GamepadMode, .GamepadMode .friendGroup .groupName,
+        .groupHeaderContainer .SortByRecent.GamepadMode, .GamepadMode .groupHeaderContainer .SortByRecent,
+        .groupHeaderContainer .SortByRecent.GamepadMode, .GamepadMode .groupHeaderContainer .SortByRecent,
+        .ChatRoomListGroupItem.GamepadMode, .GamepadMode .ChatRoomListGroupItem,
+        ._3-PbkfKv5iI-_arCCwDSNK ._356i2cRNfZnSGd79JSqaRr {
+            border-radius: 12px;
+            
+        }
+
+        /* notif page items
+        no pre-existing animation
+        */
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O,
+        .BasicUI ._2yhmcyeUOyM8lt__Skbk9O,
+        .BasicUI ._30fVm4Rsel-4nUKEiPJgz9,
+        .BasicUI ._30fVm4Rsel-4nUKEiPJgz9,
+        ._2h6KD6p6y4vIgO2Toxx-_K,
+        ._3oKFhPrh1lbp-WtA72Q2Yi {
+            border-radius: 12px;
+        }
+
+        /* soundtracks seekbar
+        anim disabled: Dv2ikGKpM6vv7qJZ-q63Q
+        */
+        ._3DLyrg7YP5cNP9HKda62qd .P_NVQ7KUOfqYaa_SwWOpS {
+            border-radius: 12px;
+        }

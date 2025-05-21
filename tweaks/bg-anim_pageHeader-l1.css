@@ -1,0 +1,4 @@
+:root {
+    /* this is to communicate with the currently selected preset */
+  --capyQam-pageHeader-layer1-bg-anim: var(--capyQam-tweakOn-pageHeader-layer1-bg-anim);
+}

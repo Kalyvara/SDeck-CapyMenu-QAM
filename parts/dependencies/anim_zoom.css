@@ -1,0 +1,7 @@
+/* not used yet, for future reference */
+@keyframes capyQam-Anim-zoom-bg {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+  100% { transform: translate(0px, 0px) rotate(0deg) scale(1.04); }
+}
+/* to use in part flavor file */
+/* --capyQam-tweakOn-itemHighlight-bg-anim: capyQam-Anim-zoom-bg 0.2s cubic-bezier(0.65, -0.6, 0.35, 1.6) 0s 1 forwards; */

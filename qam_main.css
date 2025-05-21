@@ -1,0 +1,96 @@
+/* ----------
+CapyMenu QAM
+v3.0
+By Capybara / Kalyvara
+---------- */
+
+:root {
+    /* Fallbacks for togglable animations */
+    --capyQam-main-bg-anim: none;
+    --capyQam-pageHeader-layer1-bg-anim: none;
+    --capyQam-pageHeader-layer2-bg-anim: none;
+    --capyQam-sidebarIndicator-bg-anim: none;
+}
+
+/* QAM container */
+.V0cr-SAnDhzAWmPZdrJQJ {
+    background: none;
+}
+
+/* Top Bar (in-game) */
+._1E_SL1bTibeQ3PQRBZoS_-._2mRo586DqtPuSdxT1VRirS {
+    background: var(--capyQam-topBar-bg);
+}
+.BasicUI ._1E_SL1bTibeQ3PQRBZoS_-, ._1HhLUvHH6BZLIOyOE80TVh:not(._2IsmzUdOq5mgVorXJRqLSo) {
+    color: var(--capyQam-topBar-fg);
+}
+._2m0zlP8eZ_9SlQsO52oxql ._1gJzx0OgstpPqW34DFUKC6::before,
+._2m0zlP8eZ_9SlQsO52oxql ._1gJzx0OgstpPqW34DFUKC6::after {
+    display: none;
+}
+._2HnVd7wV6yVaTiXfrBe3gq.gpfocus, ._2HnVd7wV6yVaTiXfrBe3gq.gpfocuswithin {
+    background: var(--capyQam-topBar-bg-hl);
+    color: var(--capyQam-topBar-fg-hl);
+}
+
+/* Content Panel */
+._2BB6uf--jFaAmdnwLOqMU7 {
+    background: var(--capyQam-main-bg);
+    animation: var(--capyQam-main-bg-anim);
+}
+._34nl5vUoFCDYYnmHNL7axB {
+    background: none;
+}
+/* ???
+._3ys3Sy3ff2qe7MBpyd1Qru {
+    background: var(--capyQam-main-bg);
+} */
+
+/* Tabbed Content Header */
+._2BB6uf--jFaAmdnwLOqMU7 {
+    padding-top: 0;
+}
+._34nl5vUoFCDYYnmHNL7axB,
+._3ys3Sy3ff2qe7MBpyd1Qru {
+    position: relative;
+    box-shadow: none;
+    padding-bottom: 8px;
+}
+
+/* Creating alt Tabbed Content Header */
+._34nl5vUoFCDYYnmHNL7axB::after,
+._3ys3Sy3ff2qe7MBpyd1Qru::after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    inset: 0;
+    z-index: -100;
+    background: var(--capyQam-pageHeader-layer1-bg);
+    animation: var(--capyQam-pageHeader-layer1-bg-anim);
+}
+/* Outline hack for new Tabbed Content Header */
+._34nl5vUoFCDYYnmHNL7axB::before,
+._3ys3Sy3ff2qe7MBpyd1Qru::before {
+    content: "";
+    position: absolute;
+    height: 46px;
+    width: 100%;
+    z-index: -100;
+    inset: 0;
+    background: var(--capyQam-pageHeader-layer2-bg);
+    animation: var(--capyQam-pageHeader-layer2-bg-anim);
+}
+._34nl5vUoFCDYYnmHNL7axB ._34nl5vUoFCDYYnmHNL7axB::before,
+._3ys3Sy3ff2qe7MBpyd1Qru ._34nl5vUoFCDYYnmHNL7axB::before {
+    display: none;
+}
+
+._34nl5vUoFCDYYnmHNL7axB ._34nl5vUoFCDYYnmHNL7axB::after,
+._3ys3Sy3ff2qe7MBpyd1Qru ._34nl5vUoFCDYYnmHNL7axB::after {
+    display: none;
+}
+._34nl5vUoFCDYYnmHNL7axB,
+._3ys3Sy3ff2qe7MBpyd1Qru {
+    color: var(--capyQam-pageHeader-layer1-fg);
+}

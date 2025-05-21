@@ -1,0 +1,4 @@
+:root {
+    /* this is to communicate with the currently selected preset */
+  --capyQam-main-bg-anim: var(--capyQam-tweakOn-main-bg-anim);
+}

@@ -1,0 +1,12 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    ../dependencies/anim_vLinearGrad-bg.css
+--- */
+
+:root {
+    --capyQam-itemHighlight-bg:
+        linear-gradient(to bottom, var(--capyQam-Custom-itemHighlight-bg-c1), var(--capyQam-Custom-itemHighlight-bg-c2));
+    
+    /* if user enables animation toggle */
+    --capyQam-tweakOn-itemHighlight-bg-anim: capyQam-Anim-vLinearGrad-bg 12s infinite ease-in-out alternate;
+}

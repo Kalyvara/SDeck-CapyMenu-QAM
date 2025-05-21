@@ -1,0 +1,12 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    ../dependencies/anim_hLinearGrad-bg.css
+--- */
+
+:root {
+    --capyQam-sidebarIndicator:
+        linear-gradient(to right, var(--capyQam-Custom-sidebarIndicator-c1), var(--capyQam-Custom-sidebarIndicator-c2), var(--capyQam-Custom-sidebarIndicator-c3));
+
+    /* if user enables animation toggle */
+    --capyQam-tweakOn-sidebarIndicator-bg-anim: capyQam-Anim-hLinearGrad-bg 2s infinite ease-in-out alternate;
+}

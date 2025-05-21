@@ -1,0 +1,8 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+
+:root {
+    --capyQam-sidebarPanel-bg: var(--capyQam-Custom-sidebarPanel-bg);
+}

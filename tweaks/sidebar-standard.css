@@ -1,0 +1,14 @@
+/* ---
+Content Panel
+--- */
+:root {
+    --capyQam-sidebarIndicator-position: 56px !important;
+}
+
+/* Content Panel Rounded Adjustments */
+._2BB6uf--jFaAmdnwLOqMU7 {
+    border-top-left-radius: var(--capyQam-tweakOn-sidebarLayout-standard-tl-radius);
+    border-top-right-radius: var(--capyQam-tweakOn-sidebarLayout-standard-tr-radius);
+    border-bottom-left-radius: var(--capyQam-tweakOn-sidebarLayout-standard-bl-radius);
+    border-bottom-right-radius: var(--capyQam-tweakOn-sidebarLayout-standard-br-radius);
+}

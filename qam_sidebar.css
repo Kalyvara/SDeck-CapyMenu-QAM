@@ -1,0 +1,111 @@
+/* ----------
+CapyMenu QAM
+v3.0
+By Capybara / Kalyvara
+---------- */
+
+:root {
+    --capyQam-sidebarIndicator-position: 56px;
+    --capyQam-sidebarIcon-bg-hl-anim: none;
+    
+    --capyQam-tweakOn-qamType-regular-tl-radius: 20px;
+    --capyQam-tweakOn-qamType-regular-bl-radius: 20px;
+    --capyQam-tweakOn-qamType-regular-tr-radius: 0;
+    --capyQam-tweakOn-qamType-regular-br-radius: 0;
+
+    --capyQam-tweakOn-qamType-inverted-tl-radius: 0;
+    --capyQam-tweakOn-qamType-inverted-bl-radius: 0;
+    --capyQam-tweakOn-qamType-inverted-tr-radius: 20px;
+    --capyQam-tweakOn-qamType-inverted-br-radius: 20px;
+}
+
+/* sidebar parent container
+._3Ag1wVkrYOaZyOUNWGLf3Y {
+    background: var(--capyQam-sidebar-bg);
+} */
+
+/* sidebar items container */
+._2z5NLWXYyRbqbrFDD718Y_ {
+    background: var(--capyQam-sidebarPanel-bg);
+}
+
+/* sidebar foreground (icons) */
+._1S76C3gQf4oOTbLdTMVH0m {
+    color: var(--capyQam-sidebarIcon-fg);
+}
+
+/* selected page */
+/*
+@keyframes _2dyj6SNu79q4w35u3hWY-- {
+    0% {
+        background: var(--capyQam-sidebarIcon-bg-hl);
+        color: var(--capyQam-sidebarIcon-fg-hl);
+    }
+    100% {
+        background: var(--capyQam-sidebarIcon-bg-hl);
+        color: var(--capyQam-sidebarIcon-fg-hl);
+    }
+}
+*/
+
+/* svg highlight while browsing the sidebar 
+._1S76C3gQf4oOTbLdTMVH0m._2QHMua1-KysYKpszTPAW_O.gpfocus.gpfocuswithin { 
+} */
+
+/* focused tab (state triggered when browsing items within a tab) */
+
+/*
+@keyframes _2YeD3ssgsSnvTv7ns3TJxH {
+    0% {
+        background: var(--capyQam-sidebarIcon-bg-hl);
+        color: var(--capyQam-sidebarIcon-fg-hl);
+    }
+    100% {
+        background: var(--capyQam-sidebarIcon-bg-hl);
+        color: var(--capyQam-sidebarIcon-fg-hl);
+    }
+}
+*/
+
+/* Navigation */
+    /* sidebar icon when sidebar is being focused */
+    .quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu.gpfocus {
+        background: var(--capyQam-sidebarIcon-bg-hl);
+        animation: var(--capyQam-sidebarIcon-bg-hl-anim);
+        color: var(--capyQam-sidebarIcon-fg-hl);
+    }
+    /* sidebar icon when tabbed content is being focused */
+    .quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu {
+        background: var(--capyQam-sidebarIcon-bg-hl);
+        animation: var(--capyQam-sidebarIcon-bg-hl-anim);
+        color: var(--capyQam-sidebarIcon-fg-hl);
+    }
+    /* "hotfix": sometimes the sidebar is "not entirely focused" but navigable; not sure what triggers that state */
+    .quickaccessmenu_Tab_1S76C.gpfocus {
+        background: var(--capyQam-sidebarIcon-bg-hl);
+        animation: var(--capyQam-sidebarIcon-bg-hl-anim);
+        color: var(--capyQam-sidebarIcon-fg-hl);
+    }
+    ._1S76C3gQf4oOTbLdTMVH0m {
+        transition: none;
+    }
+
+/* keyboard button (in-game) */
+._1RN_UxDCIp9wCvlh0m7OL5 {
+    border: none;
+}
+._1RN_UxDCIp9wCvlh0m7OL5 svg path {
+    fill: var(--capyQam-sidebarIcon-fg);
+}
+._1RN_UxDCIp9wCvlh0m7OL5.gpfocus svg path {
+    fill: var(--capyQam-sidebarIcon-fg-hl);
+}
+
+/* notification mark */
+._1S76C3gQf4oOTbLdTMVH0m > div {
+    background: var(--capyQam-notifMark) !important;
+}
+
+/* separator on the right */
+._3Ag1wVkrYOaZyOUNWGLf3Y::after { visibility: hidden; }
+

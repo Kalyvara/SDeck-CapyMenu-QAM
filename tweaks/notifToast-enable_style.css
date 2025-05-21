@@ -1,0 +1,37 @@
+:root {
+    /* fallback for togglable animation */
+    --capyQam-main-bg-anim: none;
+}
+
+/* ---
+Notification toasts
+--- */
+
+.shorttemplates_ShortTemplate_29NLb {
+    background: var(--capyQam-main-bg);
+    animation: var(--capyQam-main-bg-anim);
+    border-top-left-radius: var(--capyQam-tweakOn-notifExtend-qamType-tl-radius);
+    border-bottom-left-radius: var(--capyQam-tweakOn-notifExtend-qamType-bl-radius);
+    box-shadow: none;
+}
+
+.shorttemplates_ShortTemplate_29NLb .shorttemplates_Title_BkpSl,
+.shorttemplates_ShortTemplate_29NLb .shorttemplates_Icon_2TlJy,
+.shorttemplates_Content_23dSW .shorttemplates_Body_i5dFV {
+    color: var(--capyQam-main-fg);
+}
+
+.notificationcontent_FriendInGameAppColor_3uw_G {
+    font-weight: bold;
+}
+
+/*
+.shorttemplates_AvatarStatus_1wkTz.ingame {
+    background: var();
+}
+
+.standardtemplates_AvatarStatus_2yhOC.ingame,
+.standardtemplates_AvatarStatus_2yhOC.awayOrSnooze.ingame {
+    background: var();
+}
+*/

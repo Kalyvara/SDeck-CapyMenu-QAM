@@ -1,0 +1,15 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+
+:root {
+    --capyQam-itemHighlight-bg: var(--capyQam-Custom-itemHighlight-bg-c1); /* fallback if animation toggle is off */
+
+    /* if user enables animation toggle */
+    --capyQam-tweakOn-itemHighlight-bg-anim: capyQam-Anim-colorChange 4s infinite ease-in-out alternate;
+        --capyQam-AnimParam-colorChange-c1: var(--capyQam-Custom-itemHighlight-bg-c1);
+        --capyQam-AnimParam-colorChange-c2: var(--capyQam-Custom-itemHighlight-bg-c2);
+        --capyQam-AnimParam-colorChange-c3: var(--capyQam-Custom-itemHighlight-bg-c3);
+        --capyQam-AnimParam-colorChange-c4: var(--capyQam-Custom-itemHighlight-bg-c4);
+}

@@ -1,0 +1,4 @@
+:root {
+    /* this is to communicate with the currently selected preset */
+  --capyQam-itemHighlight-bg-anim: var(--capyQam-tweakOn-itemHighlight-bg-anim);
+}

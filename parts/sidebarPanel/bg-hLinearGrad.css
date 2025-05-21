@@ -1,0 +1,9 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    ../dependencies/anim_hLinearGrad-bg.css
+--- */
+
+:root {
+    --capyQam-sidebarPanel-bg:
+        linear-gradient(to right, var(--capyQam-Custom-sidebarPanel-bg-c1), var(--capyQam-Custom-sidebarPanel-bg-c2));
+}

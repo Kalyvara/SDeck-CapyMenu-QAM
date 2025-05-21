@@ -1,0 +1,16 @@
+:root {
+    --capyQam-sidebarIndicator-position: 42px;
+}   
+
+._3Ag1wVkrYOaZyOUNWGLf3Y {
+    height: fit-content;
+    align-self: flex-end;
+}
+
+/* Content Panel Rounded Adjustments */
+._2BB6uf--jFaAmdnwLOqMU7 {
+    border-top-left-radius: var(--capyQam-tweakOn-sidebarLayout-collapseBottom-tl-radius);
+    border-top-right-radius: var(--capyQam-tweakOn-sidebarLayout-collapseBottom-tr-radius);
+    border-bottom-left-radius: var(--capyQam-tweakOn-sidebarLayout-collapseBottom-bl-radius);
+    border-bottom-right-radius: var(--capyQam-tweakOn-sidebarLayout-collapseBottom-br-radius);
+}

@@ -1,0 +1,12 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+
+:root {
+    --capyQam-main-bg:
+        linear-gradient(
+            45deg, var(--capyQam-Custom-main-bg-c1) 0%, var(--capyQam-Custom-main-bg-c1) 33%,
+            var(--capyQam-Custom-main-bg-c2) 33%, var(--capyQam-Custom-main-bg-c2) 66%,
+            var(--capyQam-Custom-main-bg-c3) 66%, var(--capyQam-Custom-main-bg-c3) 100%);
+}

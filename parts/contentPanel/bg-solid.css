@@ -1,0 +1,8 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+
+:root {
+    --capyQam-main-bg: var(--capyQam-Custom-main-bg);
+}

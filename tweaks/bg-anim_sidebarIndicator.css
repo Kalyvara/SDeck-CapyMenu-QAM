@@ -1,0 +1,4 @@
+:root {
+    /* this is to communicate with the currently selected preset */
+  --capyQam-sidebarIndicator-bg-anim: var(--capyQam-tweakOn-sidebarIndicator-bg-anim);
+}

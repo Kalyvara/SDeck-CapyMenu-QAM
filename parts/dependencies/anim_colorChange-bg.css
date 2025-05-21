@@ -1,0 +1,17 @@
+@keyframes capyQam-Anim-colorChange {
+    0% {
+        background: var(--capyQam-AnimParam-colorChange-c1);
+    }
+    25% {
+        background: var(--capyQam-AnimParam-colorChange-c2);
+    }
+    50% {
+        background: var(--capyQam-AnimParam-colorChange-c3);
+    }
+    75% {
+        background: var(--capyQam-AnimParam-colorChange-c4);
+    }
+    100% {
+        background: var(--capyQam-AnimParam-colorChange-c1);
+    }
+}

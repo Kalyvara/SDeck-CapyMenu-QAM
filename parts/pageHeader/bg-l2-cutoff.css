@@ -1,0 +1,12 @@
+:root {
+    --capyQam-pageHeader-layer2-bg: var(--capyQam-Custom-pageHeader-layer2-bg-c1);
+}
+
+._34nl5vUoFCDYYnmHNL7axB::before,
+._3ys3Sy3ff2qe7MBpyd1Qru::before {
+    transform: rotate(-3deg) translateX(-40px) translateY(4px);
+    height: 60px;
+    width: 150%;
+    top: -24px;
+    /*box-shadow: 0 0 20px rgba(0, 0, 0, .45);*/
+}

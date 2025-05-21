@@ -1,0 +1,15 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+
+:root {
+    --capyQam-pageHeader-layer1-bg: var(--capyQam-Custom-pageHeader-layer1-bg-c1); /* fallback if animation toggle is off */
+
+    /* if user enables animation toggle */
+    --capyQam-tweakOn-pageHeader-layer1-bg-anim: capyQam-Anim-colorChange 4s infinite ease-in-out alternate;
+        --capyQam-AnimParam-colorChange-c1: var(--capyQam-Custom-pageHeader-layer1-bg-c1);
+        --capyQam-AnimParam-colorChange-c2: var(--capyQam-Custom-pageHeader-layer1-bg-c2);
+        --capyQam-AnimParam-colorChange-c3: var(--capyQam-Custom-pageHeader-layer1-bg-c3);
+        --capyQam-AnimParam-colorChange-c4: var(--capyQam-Custom-pageHeader-layer1-bg-c4);
+}

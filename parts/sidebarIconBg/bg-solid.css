@@ -1,0 +1,15 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+
+:root {
+    --capyQam-sidebarIcon-bg-hl: var(--capyQam-Custom-sidebarIcon-bg-hl-c1); /* fallback if animation toggle is off */
+
+    /* if user enables animation toggle */
+    --capyQam-tweakOn-sidebarIcon-bg-hl-anim: capyQam-Anim-colorChange 4s infinite ease-in-out alternate;
+        --capyQam-AnimParam-colorChange-c1: var(--capyQam-Custom-sidebarIcon-bg-hl-c1);
+        --capyQam-AnimParam-colorChange-c2: var(--capyQam-Custom-sidebarIcon-bg-hl-c2);
+        --capyQam-AnimParam-colorChange-c3: var(--capyQam-Custom-sidebarIcon-bg-hl-c3);
+        --capyQam-AnimParam-colorChange-c4: var(--capyQam-Custom-sidebarIcon-bg-hl-c4);
+}

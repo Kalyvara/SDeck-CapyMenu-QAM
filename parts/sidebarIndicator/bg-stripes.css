@@ -1,0 +1,12 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+
+:root {
+    --capyQam-sidebarIndicator:
+        linear-gradient(
+            90deg, var(--capyQam-Custom-sidebarIndicator-c1) 0%, var(--capyQam-Custom-sidebarIndicator-c1) 33%,
+            var(--capyQam-Custom-sidebarIndicator-c2) 33%, var(--capyQam-Custom-sidebarIndicator-c2) 66%,
+            var(--capyQam-Custom-sidebarIndicator-c3) 66%, var(--capyQam-Custom-sidebarIndicator-c3) 100%);
+}

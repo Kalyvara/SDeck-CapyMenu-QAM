@@ -1,0 +1,14 @@
+:root {
+    --capyQam-tweakOn-sidebarLayout-collapseTop-tl-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseTop-bl-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseTop-tr-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseTop-br-radius: 0;
+
+    --capyQam-tweakOn-sidebarLayout-collapseBottom-tl-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseBottom-bl-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseBottom-tr-radius: 0;
+    --capyQam-tweakOn-sidebarLayout-collapseBottom-br-radius: 0;
+
+    --capyQam-tweakOn-notifExtend-qamType-tl-radius: 0;
+    --capyQam-tweakOn-notifExtend-qamType-bl-radius: 0;
+}

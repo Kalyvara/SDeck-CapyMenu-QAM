@@ -1,0 +1,198 @@
+/* ----------
+CapyMenu QAM
+v3.0
+By Capybara / Kalyvara
+
+Separate file for QAM's Friends page because this page is weird and annoying
+This most notably completes the styling of (non-)highlighted foreground elements in qam_paged-content.css
+
+todo (no means of doing it myself):
+- in-game group session styling
+- other devices icon styling (steam deck, mobile)
+---------- */
+
+/* ---
+Tabs list
+--- */
+
+/* Entries */
+.GamepadMode.friendlist .FriendsListTab {
+    color: var(--capyQam-main-fg);
+    opacity: .5;
+    height: 32px;
+    width: 40px;
+    padding-bottom: 8px;
+    transition: none;
+    border-radius: 50px;
+}
+.GamepadMode.friendlist .FriendsListSteamDeckTabs {
+    height: fit-content;
+}
+
+.GamepadMode.friendlist .FriendsListTab svg path {
+    stroke: none;
+}
+.GamepadMode.friendlist .FriendsListTab.Active {
+    color: var(--capyQam-main-fg);
+    opacity: 1;
+}
+.GamepadMode.friendlist .FriendsListTab:focus {
+    color: var(--capyQam-main-fg-hl);
+    background: var(--capyQam-itemHighlight-bg);
+    animation: var(--capyQam-itemHighlight-bg-anim);
+    opacity: 1;
+}
+
+/* Icons L1, R1 */
+._3XAsxj1IJyWq6fCoSgyLoY.GamepadMode svg path:first-of-type, .GamepadMode ._3XAsxj1IJyWq6fCoSgyLoY svg path:first-of-type {
+    stroke: var(--capyQam-main-fg);
+}
+._3XAsxj1IJyWq6fCoSgyLoY.GamepadMode svg path, .GamepadMode ._3XAsxj1IJyWq6fCoSgyLoY svg path {
+    fill: var(--capyQam-main-fg);
+}
+
+/* New message notif */
+._1OKNG2o6mWU1qbgO-028X4 .AwC1OCUiJHyImqe3RNEkU.GamepadMode, .GamepadMode ._1OKNG2o6mWU1qbgO-028X4 .AwC1OCUiJHyImqe3RNEkU {
+    box-shadow: none;
+    transform: scale(1.2);
+    border-radius: 50px;
+    background: var(--capyQam-itemHighlight-bg);
+    animation: var(--capyQam-itemHighlight-bg-anim);
+    color: var(--capyQam-main-fg-hl);
+}
+
+/* ---
+Tabbed content
+Non-highlighted
+
+Note: Player status colors are left w/ their vanilla colors on purpose, except for Offline status. Might not guarantee optimal readability depending on user settings
+--- */
+
+    /* ---
+    Favorites + Friends tabs
+    --- */
+
+        /* Offline */
+            /* player name (also applies in Recent Chats) */ .offline .nOdcT-MoOaXGePXLyPe0H.GamepadMode, .GamepadMode .offline .nOdcT-MoOaXGePXLyPe0H,
+            /* rich presence */ .offline ._2Ri005Wg_uXDTa71kdRbcN, .offline ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a, .offline ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:hover, .offline ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:active, .offline ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:visited {
+                color: var(--capyQam-main-fg);
+            }
+        
+    
+    /* ---
+    Friends tab
+    --- */
+
+            /* Player status header labels */
+                .FriendsListContent .friendlistListContainer .friendGroup.onlineFriends .groupName, .FriendsListContent .friendlistListContainer .friendGroup.offlineFriends .groupName,
+                .recentChatsGroup .friendGroup .groupName, .friendGroup.taggedGroup .groupName, .friendGroup.gameGroup .groupName {
+                    color: var(--capyQam-main-fg);
+                }
+            /* Player status count */
+                .friendGroup.offlineFriends .groupName .groupCount.GamepadMode, .GamepadMode .friendGroup.offlineFriends .groupName .groupCount, .friendGroup.onlineFriends .groupName .groupCount.GamepadMode, .GamepadMode .friendGroup.onlineFriends .groupName .groupCount, .friendGroup .groupName .groupCount.collapsed.GamepadMode, .GamepadMode .friendGroup .groupName .groupCount.collapsed {
+                    color: var(--capyQam-main-fg);
+                }
+            /* Player status header border removal */
+                /* online */ .FriendsListContent .friendlistListContainer .friendGroup.onlineFriends.GamepadMode, .GamepadMode .FriendsListContent .friendlistListContainer .friendGroup.onlineFriends,
+                /* offline */ .FriendsListContent .friendlistListContainer .friendGroup.offlineFriends.GamepadMode, .GamepadMode .FriendsListContent .friendlistListContainer .friendGroup.offlineFriends {
+                    border-top: none;
+                }
+            /* Sort button */
+                .groupHeaderContainer .SortByRecent .SVGIcon_SortBy {
+                    stroke: var(--capyQam-main-fg);
+                }
+                .groupHeaderContainer.gpfocuswithin .SortByRecent {
+                    background: none;
+                    animation: none;
+                }
+
+    /* ---
+    Groups tab
+    --- */
+            
+            /* Chat labels */ .ChatRoomListGroupItem .groupNameStatusContainer .chatRoomName {
+                color: var(--capyQam-main-fg);
+            }
+
+    /* ---
+    Recent Chats tab
+    --- */
+
+            /* chat description */ ._2aS3Jemz6VGiLNz7gSXlK1.GamepadMode, .GamepadMode ._2aS3Jemz6VGiLNz7gSXlK1,
+            /* chat timestamp */ ._3-PbkfKv5iI-_arCCwDSNK ._356i2cRNfZnSGd79JSqaRr ._3byyE0p-kKaYMsugunO-HP {
+                color: var(--capyQam-main-fg);
+            }
+            /* message notif */
+            .ChatRoomListGroupItem .FriendMessageCount.GamepadMode, .GamepadMode .ChatRoomListGroupItem .FriendMessageCount, .unreadFriend .FriendMessageCount.GamepadMode, .GamepadMode .unreadFriend .FriendMessageCount {
+                box-shadow: none;
+                background: var(--capyQam-itemHighlight-bg);
+                animation: var(--capyQam-itemHighlight-bg-anim);
+                color: var(--capyQam-main-fg-hl);
+                transform: scale(1.2);
+                border-radius: 50px;
+            }
+    
+    /* Signed Out of Friends & Chat */ .wmIAbjrkSc4iOyPUxSP76 ._3zzAkjs07B06crFa5T2-Dz {
+                color: var(--capyQam-main-fg);
+            }
+            .wmIAbjrkSc4iOyPUxSP76 .Tokz1rwexqIaRgXpHGKFP {
+                color: var(--capyQam-notifMark);
+            }
+
+/* ---
+Tabbed Content
+Highlights
+--- */
+
+        /* All tabs styling, bulk */
+            /* player name + rich presence text-shadow */ .friend.gpfocus .labelHolder.GamepadMode .nOdcT-MoOaXGePXLyPe0H, .friend.gpfocus .labelHolder.GamepadMode ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .friend.gpfocus .labelHolder .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .friend.gpfocus .labelHolder ._2Ri005Wg_uXDTa71kdRbcN, .favoriteElement.gpfocus .labelHolder.GamepadMode .nOdcT-MoOaXGePXLyPe0H, .favoriteElement.gpfocus .labelHolder.GamepadMode ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .favoriteElement.gpfocus .labelHolder .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .favoriteElement.gpfocus .labelHolder ._2Ri005Wg_uXDTa71kdRbcN,
+            .friend.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .friend.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .friend.gpfocus .labelHolder.online.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .friend.gpfocus .labelHolder.online.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN, .favoriteElement.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .favoriteElement.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .favoriteElement.gpfocus .labelHolder.online.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .favoriteElement.gpfocus .labelHolder.online.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN,
+            .friend.gpfocus .labelHolder.GamepadMode.ingame.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .friend.gpfocus .labelHolder.GamepadMode.ingame ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .friend.gpfocus .labelHolder.ingame.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .friend.gpfocus .labelHolder.ingame ._2Ri005Wg_uXDTa71kdRbcN, .favoriteElement.gpfocus .labelHolder.GamepadMode.ingame.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .favoriteElement.gpfocus .labelHolder.GamepadMode.ingame ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .favoriteElement.gpfocus .labelHolder.ingame.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .favoriteElement.gpfocus .labelHolder.ingame ._2Ri005Wg_uXDTa71kdRbcN,
+            .friend.gpfocus .labelHolder.GamepadMode.offline ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .friend.gpfocus .labelHolder.offline ._2Ri005Wg_uXDTa71kdRbcN, .favoriteElement.gpfocus .labelHolder.GamepadMode.offline ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .favoriteElement.gpfocus .labelHolder.offline ._2Ri005Wg_uXDTa71kdRbcN {
+                text-shadow: none;
+            }
+            /* player items coloring; all player status should be affected */ .friend.gpfocus .labelHolder.GamepadMode .nOdcT-MoOaXGePXLyPe0H, .friend.gpfocus .labelHolder.GamepadMode ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .friend.gpfocus .labelHolder .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .friend.gpfocus .labelHolder ._2Ri005Wg_uXDTa71kdRbcN, .favoriteElement.gpfocus .labelHolder.GamepadMode .nOdcT-MoOaXGePXLyPe0H, .favoriteElement.gpfocus .labelHolder.GamepadMode ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .favoriteElement.gpfocus .labelHolder .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .favoriteElement.gpfocus .labelHolder ._2Ri005Wg_uXDTa71kdRbcN,
+            .friend.gpfocus .labelHolder.GamepadMode.offline ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .friend.gpfocus .labelHolder.offline ._2Ri005Wg_uXDTa71kdRbcN, .favoriteElement.gpfocus .labelHolder.GamepadMode.offline ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .favoriteElement.gpfocus .labelHolder.offline ._2Ri005Wg_uXDTa71kdRbcN,
+            .friend.gpfocus .labelHolder.GamepadMode.ingame.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .friend.gpfocus .labelHolder.GamepadMode.ingame ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .friend.gpfocus .labelHolder.ingame.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .friend.gpfocus .labelHolder.ingame ._2Ri005Wg_uXDTa71kdRbcN, .favoriteElement.gpfocus .labelHolder.GamepadMode.ingame.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .favoriteElement.gpfocus .labelHolder.GamepadMode.ingame ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .favoriteElement.gpfocus .labelHolder.ingame.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .favoriteElement.gpfocus .labelHolder.ingame ._2Ri005Wg_uXDTa71kdRbcN,
+            .friend.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .friend.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .friend.gpfocus .labelHolder.online.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .friend.gpfocus .labelHolder.online.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN, .favoriteElement.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .favoriteElement.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN, .GamepadMode .favoriteElement.gpfocus .labelHolder.online.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H, .GamepadMode .favoriteElement.gpfocus .labelHolder.online.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN,
+            .favoriteElement.gpfocus.gpfocuswithin ._1DsumfIa3MlkzUV9EXY5W9 ._2n0EiKMGRP-r_BI5tDtttu,
+            .friend.gpfocus.gpfocuswithin ._1DsumfIa3MlkzUV9EXY5W9 ._2n0EiKMGRP-r_BI5tDtttu,
+            .ChatRoomListGroupItem.gpfocus.gpfocuswithin .groupNameStatusContainer .chatRoomName.GamepadMode, .GamepadMode .ChatRoomListGroupItem.gpfocus.gpfocuswithin .groupNameStatusContainer .chatRoomName,
+            .unreadFriend.gpfocus.gpfocuswithin ._2aS3Jemz6VGiLNz7gSXlK1.GamepadMode,
+            .unreadFriend.gpfocus.gpfocuswithin ._2aS3Jemz6VGiLNz7gSXlK1,
+            ._3-PbkfKv5iI-_arCCwDSNK .unreadFriend.gpfocus.gpfocuswithin._356i2cRNfZnSGd79JSqaRr ._3byyE0p-kKaYMsugunO-HP
+            {
+                color: var(--capyQam-main-fg-hl);
+            }
+            /* friends tab -> category headers and sorting button */
+            .groupName.gpfocus.gpfocuswithin,
+            .groupHeaderContainer.gpfocuswithin .groupName.gpfocus .groupCount {
+                color: var(--capyQam-main-fg-hl) !important;
+            }
+            .groupHeaderContainer .SortByRecent:hover .SVGIcon_SortBy,
+            .groupHeaderContainer .SortByRecent.gpfocus .SVGIcon_SortBy {
+                stroke: var(--capyQam-main-fg-hl);
+            }
+
+
+/* ---
+Extras
+--- */
+
+/* Notif in top bar (in-game) */
+._1T5qba9seDU2InQxOwhTO2 {
+    background: var(--capyQam-itemHighlight-bg);
+    animation: var(--capyQam-itemHighlight-bg-anim);
+    box-shadow: none;
+    /*box-shadow: 0 0 8px 1px var(--capyQam-notifMark);*/
+}
+
+/* ---
+Untested / not sure what it does / can't remember
+---
+
+.ChatUnreadMessageIndicator .chatUnreadCircle {
+    display: none;
+}
+
+--- */

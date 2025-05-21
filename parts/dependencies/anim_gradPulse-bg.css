@@ -1,0 +1,8 @@
+@keyframes capyQam-Anim-gradPulse-bg {
+  0%, 100% {
+    background-size: var(--capyQam-AnimParam-gradPulse-x1) var(--capyQam-AnimParam-gradPulse-y1);
+  }
+  50% {
+    background-size: var(--capyQam-AnimParam-gradPulse-x2) var(--capyQam-AnimParam-gradPulse-y2);
+  }
+}

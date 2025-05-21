@@ -1,0 +1,1275 @@
+{
+    "name": "CapyMenu (QAM)",
+    "display_name": "CapyMenu (QAM) 2025",
+    "author": "Capybara",
+    "version": "v3.0",
+    "manifest_version": 9,
+    "dependencies": {
+        "CapyInputs": {}
+      },
+      "flags": [
+        "OPTIONAL_DEPENDENCIES",
+        "REQUIRE_NAV_PATCH"
+      ],
+    "tabs": {
+        "default": [
+            "QuickAccess",
+            "notificationtoasts.*"
+        ]
+    },
+    "inject": {
+        "qam_main.css": [],
+        "qam_sidebar.css": [],
+        "qam_paged-content.css": [],
+        "qam_friends-page.css": [],
+        "custom-template.css": []
+    },
+    "patches": {
+        "➤ Global Settings": {
+            "type": "none",
+            "values": {
+                "_": {}
+            }
+        },
+        "QAM Type": {
+            "type": "slider",
+            "default": "Regular",
+            "values": {
+                "Regular": {
+                    "tweaks/qam-type-regular.css": []
+                },
+                "Regular Rounded": {
+                    "tweaks/qam-type-regular_rounded.css": [],
+                    "tweaks/qam-rounded_shared-components.css": []
+                },
+                "Inverted": {
+                    "tweaks/qam-type-inverted.css": []
+                },
+                "Inverted Rounded": {
+                    "tweaks/qam-type-inverted_rounded.css": [],
+                    "tweaks/qam-rounded_shared-components.css": []
+                }
+            }
+        },
+        "Sidebar Layout": {
+            "type": "slider",
+            "default": "Collapse Top",
+            "values": {
+                "Standard": {
+                    "tweaks/sidebar-standard.css": []
+                },
+                "Collapse Center": {
+                    "tweaks/sidebar-collapse-center.css": []
+                },
+                "Collapse Top": {
+                    "tweaks/sidebar-collapse-top.css": []
+                },
+                "Collapse Bottom": {
+                    "tweaks/sidebar-collapse-bottom.css": []
+                }
+            }
+        },
+        "Show Sidebar Page Indicator": {
+            "type": "checkbox",
+            "default": "Yes",
+            "values": {
+                "Yes": {
+                    "tweaks/sidebar-page-indicator.css": []
+                },
+                "No": {}
+            }
+        },
+        "Hide Help Page": {
+            "type": "checkbox",
+            "default": "Yes",
+            "values": {
+                "Yes": {
+                    "tweaks/sidebar-hide-help-page.css": []
+                },
+                "No": {}
+            }
+        },
+        "Extend QAM Styling To Notification Toasts": {
+            "type": "checkbox",
+            "default": "Yes",
+            "values": {
+                "Yes": {
+                    "tweaks/notifToast-enable_style.css": []
+                },
+                "No": {}
+            }
+        },
+        "➤ Content Panel": {
+            "type": "none",
+            "values": {
+                "_": {}
+            }
+        },
+        "Content Panel Background Type": {
+                "type": "slider",
+                "default": "Solid Color",
+                "values": {
+                    "Solid Color": {
+                        "parts/contentPanel/bg-solid.css": []
+                    },
+                    "H-Linear Grad": {
+                        "parts/contentPanel/bg-hLinearGrad.css": [],
+                        "parts/dependencies/anim_hLinearGrad-bg.css": []
+                    },
+                    "V-Linear Grad": {
+                        "parts/contentPanel/bg-vLinearGrad.css": [],
+                        "parts/dependencies/anim_vLinearGrad-bg.css": []
+                    },
+                    "Radial Grad": {
+                        "parts/contentPanel/bg-radialGrad.css": [],
+                        "parts/dependencies/anim_gradPulse-bg.css": []
+                    },
+                    "Halos": {
+                        "parts/contentPanel/bg-halos.css": [],
+                        "parts/dependencies/anim_5colorGrad-bg.css": []
+                    },
+                    "Stripes": {
+                        "parts/contentPanel/bg-stripes.css": []
+                    },
+                    "IMG": {
+                        "parts/contentPanel/bg-img.css": []
+                    }
+                },
+            "components": [
+                {
+                    "name": "Solid Color",
+                    "type": "color-picker",
+                    "on": "Solid Color",
+                    "default": "#0f0f0f",
+                    "css_variable": "capyQam-Custom-main-bg",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "capyQam-Custom-main-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "capyQam-Custom-main-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "capyQam-Custom-main-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#50eb79",
+                    "css_variable": "capyQam-Custom-main-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 3",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "capyQam-Custom-main-bg-c3",
+                    "tabs": []
+                },
+                                {
+                    "name": "Radial Grad 1",
+                    "type": "color-picker",
+                    "on": "Radial Grad",
+                    "default": "#eb506f",
+                    "css_variable": "capyQam-Custom-main-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Radial Grad 2",
+                    "type": "color-picker",
+                    "on": "Radial Grad",
+                    "default": "#50baeb",
+                    "css_variable": "capyQam-Custom-main-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 1",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#eb506f",
+                    "css_variable": "capyQam-Custom-main-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 2",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#50eb79",
+                    "css_variable": "capyQam-Custom-main-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 3",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#50baeb",
+                    "css_variable": "capyQam-Custom-main-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 4",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#dff261",
+                    "css_variable": "capyQam-Custom-main-bg-c4",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 5",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#b161f2",
+                    "css_variable": "capyQam-Custom-main-bg-c5",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 1",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#eb506f",
+                    "css_variable": "capyQam-Custom-main-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 2",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50eb79",
+                    "css_variable": "capyQam-Custom-main-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 3",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50baeb",
+                    "css_variable": "capyQam-Custom-main-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Image Picker",
+                    "type": "image-picker",
+                    "on": "IMG",
+                    "default": "",
+                    "css_variable": "capyQam-Custom-main-bg",
+                    "tabs": []
+                }
+            ]
+        },
+        "↳ Content Panel Bg Anim (❌ Solid Color, Stripes, IMG)": {
+            "type": "checkbox",
+            "default": "No",
+            "values": {
+                "Yes": {
+                    "tweaks/bg-anim_contentPanel.css": []
+                },
+                "No": {
+                }
+            }
+        },
+        "Content Panel Foreground": {
+            "type": "none",
+            "values": {
+                "_": {}
+        },
+        "components": [
+            {
+                "name": "Color",
+                "type": "color-picker",
+                "on": "_",
+                "default": "#adadad",
+                "css_variable": "capyQam-Custom-main-fg",
+                "tabs": []
+            }
+        ]
+        },
+        "Header Layer 1 Bg Type": {
+                "type": "slider",
+                "default": "Solid Colors",
+                "values": {
+                    "Solid Colors": {
+                        "parts/pageHeader/bg-solid.css": [],
+                        "parts/dependencies/anim_colorChange-bg.css": []
+                    },
+                    "H-Linear Grad": {
+                        "parts/pageHeader/bg-hLinearGrad.css": [],
+                        "parts/dependencies/anim_hLinearGrad-bg.css": []
+                    },
+                    "V-Linear Grad": {
+                        "parts/pageHeader/bg-vLinearGrad.css": [],
+                        "parts/dependencies/anim_vLinearGrad-bg.css": []
+                    },
+                    "Halos": {
+                        "parts/pageHeader/bg-halos.css": [],
+                        "parts/dependencies/anim_5colorGrad-bg.css": []
+                    },
+                    "Stripes": {
+                        "parts/pageHeader/bg-stripes.css": []
+                    },
+                    "Cutoff": {
+                        "parts/pageHeader/bg-cutoff.css": []
+                    }
+                },
+            "components": [
+                {
+                    "name": "Color 1",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#d1d1d1",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 2 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 3 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 4 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c4",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 3",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 1",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 2",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 3",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 4",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#dff261",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c4",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 5",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#b161f2",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c5",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 1",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 2",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 3",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Cutoff",
+                    "type": "color-picker",
+                    "on": "Cutoff",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer1-bg-c1",
+                    "tabs": []
+                }
+            ]
+        },
+        "↳ Header Layer 1 Bg Anim (❌ Stripes, Cutoff)": {
+            "type": "checkbox",
+            "default": "No",
+            "values": {
+                "Yes": {
+                    "tweaks/bg-anim_pageHeader-l1.css": []
+                },
+                "No": {
+                }
+            }
+        },
+        "Header Layer 2 Bg Type": {
+                "type": "slider",
+                "default": "H-Linear Grad",
+                "values": {
+                    "Solid Colors": {
+                        "parts/pageHeader/bg-l2-solid.css": [],
+                        "parts/dependencies/anim_colorChange-bg.css": []
+                    },
+                    "H-Linear Grad": {
+                        "parts/pageHeader/bg-l2-hLinearGrad.css": [],
+                        "parts/dependencies/anim_hLinearGrad-bg.css": []
+                    },
+                    "Cutoff": {
+                        "parts/pageHeader/bg-l2-cutoff.css": []
+                    }
+                },
+            "components": [
+                {
+                    "name": "Color 1",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer2-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 2 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer2-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 3 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer2-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 4 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#dff261",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer2-bg-c4",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#ccdb76",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer2-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#76dbda",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer2-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 3",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#db7689",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer2-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Cutoff",
+                    "type": "color-picker",
+                    "on": "Cutoff",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-pageHeader-layer2-bg-c1",
+                    "tabs": []
+                }
+            ]
+        },
+        "↳ Header Layer 2 Bg Anim (❌ Cutoff)": {
+            "type": "checkbox",
+            "default": "Yes",
+            "values": {
+                "Yes": {
+                    "tweaks/bg-anim_pageHeader-l2.css": []
+                },
+                "No": {
+                }
+            }
+        },
+        "Header Foreground": {
+            "type": "none",
+            "values": {
+                "_": {}
+        },
+        "components": [
+            {
+                "name": "Color",
+                "type": "color-picker",
+                "on": "_",
+                "default": "#202020",
+                "css_variable": "capyQam-Custom-pageHeader-layer1-fg",
+                "tabs": []
+            }
+        ]
+        },
+        "➤ Focusable Items In Page": {
+            "type": "none",
+            "values": {
+                "_": {}
+            }
+        },
+        "Focusable Item Bg Highlight Type": {
+            "type": "slider",
+            "default": "Halos",
+            "values": {
+                    "Solid Colors": {
+                        "parts/itemHighlight/bg-solid.css": [],
+                        "parts/dependencies/anim_colorChange-bg.css": []
+                    },
+                    "H-Linear Grad": {
+                        "parts/itemHighlight/bg-hLinearGrad.css": [],
+                        "parts/dependencies/anim_hLinearGrad-bg.css": []
+                    },
+                    "V-Linear Grad": {
+                        "parts/itemHighlight/bg-vLinearGrad.css": [],
+                        "parts/dependencies/anim_vLinearGrad-bg.css": []
+                    },
+                    "Halos": {
+                        "parts/itemHighlight/bg-halos.css": [],
+                        "parts/dependencies/anim_5colorGrad-bg.css": []
+                    },
+                    "Stripes": {
+                        "parts/itemHighlight/bg-stripes.css": [],
+                        "parts/dependencies/anim_jitter-bg.css": []
+                    }
+                },
+              "components": [
+                {
+                    "name": "Color 1",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 2 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 3 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 4 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#dff261",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c4",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 3",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 1",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#f4f4f4",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 2",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#ccc",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 3",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#bab3b3",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 4",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#bfbfbf",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c4",
+                    "tabs": []
+                },
+                {
+                    "name": "Halo 5",
+                    "type": "color-picker",
+                    "on": "Halos",
+                    "default": "#8c8c8c",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c5",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 1",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 2",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 3",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-itemHighlight-bg-c3",
+                    "tabs": []
+                }
+            ]
+        },
+        "↳ Focusable Item Highlight Bg Anim (❌ Stripes)": {
+            "type": "checkbox",
+            "default": "No",
+            "values": {
+                "Yes": {
+                    "tweaks/bg-anim_selectableElement.css": []
+                },
+                "No": {
+                }
+            }
+        },
+        "Focusable Item Highlight Fg": {
+            "type": "none",
+            "values": {
+                "_": {}
+        },
+        "components": [
+            {
+                "name": "Color",
+                "type": "color-picker",
+                "on": "_",
+                "default": "#202020",
+                "css_variable": "capyQam-Custom-main-fg-hl",
+                "tabs": []
+            }
+        ]
+        },
+        "Item Separators": {
+            "type": "none",
+            "values": {
+                "_": {}
+        },
+        "components": [
+            {
+                "name": "Color",
+                "type": "color-picker",
+                "on": "_",
+                "default": "#00000000",
+                "css_variable": "capyQam-Custom-item-separator",
+                "tabs": []
+            }
+        ]
+        },
+        "➤ Sidebar": {
+            "type": "none",
+            "values": {
+                "_": {}
+            }
+        },
+        "Sidebar Panel Background": {
+            "type": "slider",
+            "default": "Solid Color",
+            "values": {
+                    "Solid Color": {
+                        "parts/sidebarPanel/bg-solid.css": []
+                    },
+                    "H-Linear Grad": {
+                        "parts/sidebarPanel/bg-hLinearGrad.css": []
+                    },
+                    "V-Linear Grad": {
+                        "parts/sidebarPanel/bg-vLinearGrad.css": []
+                    },
+                    "Stripes": {
+                        "parts/sidebarPanel/bg-stripes.css": []
+                    }
+                },
+              "components": [
+                {
+                    "name": "Color",
+                    "type": "color-picker",
+                    "on": "Solid Color",
+                    "default": "#dbdbdb",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 3",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 1",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 2",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 3",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarPanel-bg-c3",
+                    "tabs": []
+                }
+            ]
+        },
+        "Sidebar Icon": {
+            "type": "none",
+            "values": {
+                "_": {}
+            },
+            "components": [
+                {
+                    "name": "Color",
+                    "type": "color-picker",
+                    "on": "_",
+                    "default": "#0d0d0d4D",
+                    "css_variable": "capyQam-Custom-sidebarIcon-fg",
+                    "tabs": []
+                }
+            ]
+        },
+        "Sidebar Icon Highlight": {
+            "type": "none",
+            "values": {
+                "_": {}
+            },
+            "components": [
+                {
+                    "name": "Color",
+                    "type": "color-picker",
+                    "on": "_",
+                    "default": "#bababa",
+                    "css_variable": "capyQam-Custom-sidebarIcon-fg-hl",
+                    "tabs": []
+                }
+            ]
+        },
+          "Sidebar Icon Bg Highlight": {
+            "type": "slider",
+            "default": "Solid Colors",
+            "values": {
+                    "Solid Colors": {
+                        "parts/sidebarIconBg/bg-solid.css": [],
+                        "parts/dependencies/anim_colorChange-bg.css": []
+                    },
+                    "H-Linear Grad": {
+                        "parts/sidebarIconBg/bg-hLinearGrad.css": [],
+                        "parts/dependencies/anim_hLinearGrad-bg.css": []
+                    },
+                    "V-Linear Grad": {
+                        "parts/sidebarIconBg/bg-vLinearGrad.css": [],
+                        "parts/dependencies/anim_vLinearGrad-bg.css": []
+                    },
+                    "Stripes": {
+                        "parts/sidebarIconBg/bg-stripes.css": []
+                    }
+                },
+              "components": [
+                {
+                    "name": "Color 1",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#161616",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 2 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 3 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 4 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c4",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "V-Linear Grad 3",
+                    "type": "color-picker",
+                    "on": "V-Linear Grad",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 1",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 2",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 3",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarIcon-bg-hl-c3",
+                    "tabs": []
+                }
+            ]
+        },
+        "↳ Sidebar Icon Highlight Bg Anim (❌ Stripes)": {
+            "type": "checkbox",
+            "default": "No",
+            "values": {
+                "Yes": {
+                    "tweaks/bg-anim_sidebarIcon-hl.css": []
+                },
+                "No": {
+                }
+            }
+        },
+        "Sidebar Page Indicator": {
+            "type": "slider",
+            "default": "H-Linear Grad",
+            "values": {
+                    "Solid Colors": {
+                        "parts/sidebarIndicator/bg-solid.css": [],
+                        "parts/dependencies/anim_colorChange-bg.css": []
+                    },
+                    "H-Linear Grad": {
+                        "parts/sidebarIndicator/bg-hLinearGrad.css": [],
+                        "parts/dependencies/anim_hLinearGrad-bg.css": []
+                    },
+                    "Stripes": {
+                        "parts/sidebarIndicator/bg-stripes.css": []
+                    }
+                },
+              "components": [
+                {
+                    "name": "Color 1",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 2 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 3 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Color 4 (Anim Only)",
+                    "type": "color-picker",
+                    "on": "Solid Colors",
+                    "default": "#dff261",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c4",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 1",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#ccdb76",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 2",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#76dbda",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "H-Linear Grad 3",
+                    "type": "color-picker",
+                    "on": "H-Linear Grad",
+                    "default": "#db7689",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c3",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 1",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#eb506f",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c1",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 2",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50eb79",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c2",
+                    "tabs": []
+                },
+                {
+                    "name": "Stripe 3",
+                    "type": "color-picker",
+                    "on": "Stripes",
+                    "default": "#50baeb",
+                    "css_variable": "--capyQam-Custom-sidebarIndicator-c3",
+                    "tabs": []
+                }
+            ]
+        },
+        "↳ Sidebar Indicator Anim (❌ Stripes)": {
+            "type": "checkbox",
+            "default": "Yes",
+            "values": {
+                "Yes": {
+                    "tweaks/bg-anim_sidebarIndicator.css": []
+                },
+                "No": {
+                }
+            }
+        },
+        "➤ Top Bar (Only Visible In-Game)": {
+            "type": "none",
+            "values": {
+                "_": {}
+            }
+        },
+        "Top Bar Background": {
+            "type": "none",
+            "values": {
+                "_": {}
+            },
+            "components": [
+                {
+                    "name": "Color",
+                    "type": "color-picker",
+                    "on": "_",
+                    "default": "#ccc",
+                    "css_variable": "capyQam-Custom-topBar-bg",
+                    "tabs": []
+                }
+            ]
+        },
+        "Top Bar Foreground": {
+            "type": "none",
+            "values": {
+                "_": {}
+            },
+            "components": [
+                {
+                    "name": "Color",
+                    "type": "color-picker",
+                    "on": "_",
+                    "default": "#202020",
+                    "css_variable": "capyQam-Custom-topBar-fg",
+                    "tabs": []
+                }
+            ]
+        },
+        "Top Bar Bg Highlight": {
+            "type": "none",
+            "values": {
+                "_": {}
+            },
+            "components": [
+                {
+                    "name": "Color",
+                    "type": "color-picker",
+                    "on": "_",
+                    "default": "#202020",
+                    "css_variable": "capyQam-Custom-topBar-bg-hl",
+                    "tabs": []
+                }
+            ]
+        },
+        "Top Bar Fg Highlight": {
+            "type": "none",
+            "values": {
+                "_": {}
+            },
+            "components": [
+                {
+                    "name": "Color",
+                    "type": "color-picker",
+                    "on": "_",
+                    "default": "#ccc",
+                    "css_variable": "capyQam-Custom-topBar-fg-hl",
+                    "tabs": []
+                }
+            ]
+        },
+        "➤ Other": {
+            "type": "none",
+            "values": {
+                "_": {}
+            }
+        },
+        "Notification Mark": {
+            "type": "none",
+            "values": {
+                "_": {}
+            },
+            "components": [
+                {
+                    "name": "Color",
+                    "type": "color-picker",
+                    "on": "_",
+                    "default": "#de234f",
+                    "css_variable": "capyQam-Custom-notifMark",
+                    "tabs": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    ../dependencies/anim_hLinearGrad-bg.css
+--- */
+
+:root {
+    --capyQam-pageHeader-layer1-bg:
+        linear-gradient(to right, var(--capyQam-Custom-pageHeader-layer1-bg-c1), var(--capyQam-Custom-pageHeader-layer1-bg-c2), var(--capyQam-Custom-pageHeader-layer1-bg-c3));
+    
+    /* if user enables animation toggle */
+    --capyQam-tweakOn-pageHeader-layer1-bg-anim: capyQam-Anim-hLinearGrad-bg 12s infinite ease-in-out alternate;
+}

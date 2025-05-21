@@ -1,0 +1,21 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    ../dependencies/anim_gradPulse-bg.css
+--- */
+
+:root {
+    --capyQam-main-bg:
+        radial-gradient(circle at top -80px left -20px, var(--capyQam-Custom-main-bg-c1) 0% 10%, var(--capyQam-Custom-main-bg-c2) 60% 100%);
+    
+    /* if user enables animation toggle */
+    --capyQam-tweakOn-main-bg-anim: capyQam-Anim-gradPulse-bg 12s infinite ease-in-out alternate;
+        --capyQam-AnimParam-gradPulse-x1: 100%;
+        --capyQam-AnimParam-gradPulse-y1: 100%;
+        --capyQam-AnimParam-gradPulse-x2: 200%;
+        --capyQam-AnimParam-gradPulse-y2: 200%;
+}
+
+._2BB6uf--jFaAmdnwLOqMU7 {
+    background-color: var(--capyQam-Custom-main-bg-c2);
+    background-repeat: no-repeat;
+}

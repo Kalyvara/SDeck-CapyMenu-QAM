@@ -1,0 +1,26 @@
+/* ---
+CapyMenu QAM
+Custom Template
+--- */
+
+:root {
+
+    --capyQam-main-fg: var(--capyQam-Custom-main-fg);
+    --capyQam-item-separator: var(--capyQam-Custom-item-separator);
+
+    --capyQam-pageHeader-layer1-fg: var(--capyQam-Custom-pageHeader-layer1-fg);
+    --capyQam-pageHeader-layer1-outline: var(--capyQam-Custom-pageHeader-layer1-outline);
+
+    --capyQam-main-fg-hl: var(--capyQam-Custom-main-fg-hl);
+
+    --capyQam-sidebarIcon-fg: var(--capyQam-Custom-sidebarIcon-fg);
+    --capyQam-sidebarIcon-fg-hl: var(--capyQam-Custom-sidebarIcon-fg-hl);
+
+    --capyQam-topBar-bg: var(--capyQam-Custom-topBar-bg);
+    --capyQam-topBar-fg: var(--capyQam-Custom-topBar-fg);
+    --capyQam-topBar-bg-hl: var(--capyQam-Custom-topBar-bg-hl);
+    --capyQam-topBar-fg-hl: var(--capyQam-Custom-topBar-fg-hl);
+
+    --capyQam-notifMark: var(--capyQam-Custom-notifMark);
+    
+}

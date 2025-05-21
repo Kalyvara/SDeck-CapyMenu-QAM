@@ -1,0 +1,58 @@
+///// Developer (self-)notes, for future reference
+
+// about CapyMenu QAM v3
+
+CapyMenu QAM provides essentially the same features as before (and lots more), but its inner functioning has been fundamentally redesigned.
+
+// design philosophy
+
+From v3 onwards, CapyMenu QAM uses qam_main.css, qam_paged-content.css, qam_sidebar.css and qam_friends-page.css as base injection. Those files cover the essential structure/theming and define the core CSS variables that are then used everywhere else. Friends page in QAM is utter jank, so I made it a dedicated CSS file.
+
+Because CapyMenu is about extensive customization and modularity, I found it relevant to design it around "dependencies" that are pre-injected in theme.json.
+
+Dependencies are used in conjunction with what I call "parts" (yes, I lack inspiration), found in the parts/ folder. Parts are essentially base templates for whichever UI component; they complete the aforementioned base injection:
+    contentPanel: right-hand side of QAM; focused page
+    itemHighlight: selectable item highlighted state in paged content
+    pageHeader: pseudo-elements I created as a workaround to the buggy header of previous versions of CapyMenu QAM. comes in two layers (::before, ::after) for aesthetic purposes
+    sidebarPanel: tabs container of sidebar
+    sidebarIconBg: highlighted state of sidebar tab item
+    sidebarIndicator: another pseudo-element I implemented mostly as a legacy feature (previous version of CapyMenu QAM was using "border-bottom", which has annoying effects: moves around things, doesn't support gradients)
+
+Parts listed above come in different aesthetic flavors (e.g. H-Linear Grad, V-Linear Grad, Stripes, etc.); each has unique aesthetic features, meaning each may rely (or not) on their own specific set of dependencies.
+So, "part flavor" = uniquely styled UI component; whereas we can see dependencies as cosmetic fills, necessary to craft the aesthetic identity/flavor of one part.
+
+All parts are always injected in all circumstances, otherwise the theming is not complete. This is done across theme.json with provided default selection (= flavor). The user can then change the part's flavor via CSS Loader components to their liking.
+
+This should (or so I hope) ensure consistent compatibility between user-defined settings and CSS rules that are being injected.
+
+Practical example:
+    The "Halos" flavor of contentPanel background requires the ../dependencies/anim_5colorGrad-bg.css animation "dependency". So, whenever the user sets contentPanel background to "Halos", ../parts/contentPanel/bg-halos.css comes pre-injected together with its dependency ../dependencies/anim_5colorGrad-bg.css in theme.json.
+
+    In this example, ../dependencies/anim_5colorGrad-bg.css grants access to the CSS @keyframes. Those @keyframes are designed to be compatible with the radial-gradients defined in ../parts/contentPanel/bg-halos.css, which in turn defines as a whole the "Halos" flavor of contentPanel.
+    
+    The specifics of the animation rule must be specified within the part flavor file. It's pretty much like importing a library.
+
+Note that dependencies may expect parameters (e.g. --capyQam-AnimParam-colorChange-c1/c2/c3/c4/c5 in ../dependencies/anim_colorChange-bg.css), which are then to be specified also within the part flavor file.
+
+Typically (but not exclusively), dependencies are animations. Flavors that use togglable animations MUST ALWAYS include "--capyQam-tweakOn-xxx-anim"-labeled variables. More details in the next section.
+
+// animation toggles
+
+CapyMenu offers users the possibility to toggle on or off animations of whichever part. However, there is a necessity to check beforehand which flavor (= uniquely styled UI component) the user is using to begin with; and consequentially, which animation to toggle on or off.
+
+This is handled by the "bg-anim"-labeled files in the tweaks/ folder, which are the files that are being injected whenever an animation toggle is enabled. The process goes as follows:
+
+xxx = part
+    1) Make a fallback animation "--capyQam-xxx-bg-anim: none" either in qam_main.css, qam_paged-content.css or qam_sidebar.css (depending on the part concerned). This is the value taken when the toggle is off.
+    2) Toggle is on => tweaks/bg-anim_xxx.css is injected, and "checks" for "--capyQam-tweakOn-xxx-bg-anim"
+    It turns out, "--capyQam-tweakOn-xxx-bg-anim" pre-exists within the part flavor file and contains its animation rule
+    3) Therefore, "--capyQam-xxx-bg-anim" is set with the animation rule tied to the concerned flavor, so the toggle will always trigger the correct (compatible) animation
+
+So, "tweaks/bg-anim_xxx.css" acts as a necessary intermediary.
+
+// Workflow 1: new animation
+
+1) create a new anim-xxx.css dependency in parts/dependencies. this file should contain keyframes and maybe extra stuff
+2) pick a part to animate (itemHighlight, contentPanel...) and create a new flavor in the corresponding folder
+3) set the core variable CSS rule with theme.json/CSS Loader components in mind; specify the animation rule
+4) add flavor and dependency to theme.json
