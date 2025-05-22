@@ -1,0 +1,7 @@
+:root {
+    --capyQAM_mainPanelBg: linear-gradient(110deg, var(--capyQAM_mainPanelGrad1), var(--capyQAM_mainPanelGrad2), var(--capyQAM_mainPanelGrad3)) !important;
+}
+
+.quickaccessmenu_PanelOuterNav_2BB6u {
+    background: var(--capyQAM_mainPanelBg) !important;
+}

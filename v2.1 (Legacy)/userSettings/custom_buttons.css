@@ -1,0 +1,3 @@
+:root {
+    --capyQAM_ddButtonBg: linear-gradient(180deg, var(--capyQAM_ddButtonGrad1), var(--capyQAM_ddButtonGrad2), var(--capyQAM_ddButtonGrad3)) !important;
+}

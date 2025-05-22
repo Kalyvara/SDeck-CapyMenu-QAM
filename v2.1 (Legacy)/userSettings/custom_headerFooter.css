@@ -1,0 +1,7 @@
+:root {
+    --capyQAM_headerFooterBgColor: linear-gradient(110deg, var(--capyQAM_headFootGrad1), var(--capyQAM_headFootGrad2), var(--capyQAM_headFootGrad3));
+}
+
+.footer_BasicFooter_3T1iF.footer_QuickAccessFooter_VdbQ_, .quickaccessmenu_HeaderContainer_3k5MH {
+    background: var(--capyQAM_headerFooterBgColor) !important;
+}

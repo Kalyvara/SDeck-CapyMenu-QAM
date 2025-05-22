@@ -1,0 +1,6 @@
+/* Panel separator type 2: fade-out gradient */
+.quickaccessmenu_Tabs_3Ag1w::after {
+    visibility: visible;
+    width: 40px;
+    background: linear-gradient(-90deg, var(--capyQAM_panelSeparatorColor), transparent);
+}

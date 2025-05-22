@@ -1,0 +1,7 @@
+:root {
+    --capyQAM_mainPanelBg: linear-gradient(110deg, rgba(112, 255, 205, var(--capyQAM_mainPanelOpacity)), rgba(255, 171, 189, var(--capyQAM_mainPanelOpacity)), rgba(255, 249, 196, var(--capyQAM_mainPanelOpacity)));
+}
+
+.quickaccessmenu_PanelOuterNav_2BB6u {
+    background: var(--capyQAM_mainPanelBg) !important;
+}

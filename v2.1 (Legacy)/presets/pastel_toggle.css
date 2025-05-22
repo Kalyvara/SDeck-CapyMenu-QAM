@@ -1,0 +1,19 @@
+:root {
+    --capyQAM_toggleColor: linear-gradient(90deg, rgba(112, 255, 205, 255), rgba(255, 171, 189, 255), rgba(255, 249, 196, 255));
+    --capyQAM_toggleAnimation: capyQAM_animToggleGradient 10s ease infinite forwards !important;
+}
+
+/* Toggles, sliders */
+.gamepaddialog_ToggleRail_2JtC3::before {
+	background: var(--capyQAM_toggleColor);
+	animation: var(--capyQAM_toggleAnimation);
+}
+.gamepadslider_SliderTrack_Mq25N::before {
+    background: var(--capyQAM_toggleColor);
+	animation: var(--capyQAM_toggleAnimation);
+}
+/* Ticks */
+div .gamepadslider_SliderNotchTick_Fv1Ht.gamepadslider_TickActive_1gnUV {
+	background: var(--capyQAM_toggleColor);
+	animation: var(--capyQAM_toggleAnimation);
+} 

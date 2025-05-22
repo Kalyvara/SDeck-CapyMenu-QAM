@@ -1,0 +1,44 @@
+/* ---
+CapyMenu QAM
+v2.1
+By Capybara / Kalyvara
+
+Performance
+--- */
+
+
+
+/* Performance profile text */
+.perf_PerfProfileInfoBasic_1nXii {
+    color: var(--capyQAM_mainTextColor);
+}
+
+/* Battery projected, value */
+.quickaccesscontrols_BatteryDetailsLabels_3M39z .quickaccesscontrols_BatteryProjectedValue_1mTo6 {
+    color: var(--capyQAM_mainTextColor);
+}
+
+/* Battery projected, text */
+.quickaccesscontrols_BatteryDetailsLabels_3M39z .quickaccesscontrols_BatteryProjectedLabel_4hS40 {
+    color: var(--capyQAM_mainTextColor);
+}
+
+/* Performance settings text */
+.perf_PerfProfileInfo_1UqP6 .perf_Heading_23Yxa .perf_Text_3gY4m {
+    color: var(--capyQAM_mainTextColor);
+}
+
+/* Profile used text */
+.perf_PerfProfileInfo_1UqP6 .perf_SubHeading_2C4wP .perf_Text_3gY4m {
+    color: var(--capyQAM_mainTextColor);
+}
+
+/* Tab separator / bottom line */
+.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorThick_28hmy::after {
+    background: none;
+}
+
+/* Battery icon outline */
+.quickaccesscontrols_BatteryIcon_39aNh svg {
+    color: var(--capyQAM_mainTextColor);
+}

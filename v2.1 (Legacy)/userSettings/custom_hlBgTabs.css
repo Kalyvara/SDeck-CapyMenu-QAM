@@ -1,0 +1,8 @@
+:root {
+    --capyQAM_hl_tabsBgColor: linear-gradient(180deg, var(--capyQAM_hl_tabsBgGrad1), var(--capyQAM_hl_tabsBgGrad2), var(--capyQAM_hl_tabsBgGrad3));
+}
+
+.quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu, .quickaccessmenu_Tab_1S76C.gpfocus.gpfocuswithin {
+    background: var(--capyQAM_hl_tabsBgColor) !important;
+    animation: none;
+}

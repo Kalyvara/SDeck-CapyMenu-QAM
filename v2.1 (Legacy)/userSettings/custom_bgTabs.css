@@ -1,0 +1,7 @@
+:root {
+    --capyQAM_tabsBgColor: linear-gradient(180deg, var(--capyQAM_tabsBgGrad1), var(--capyQAM_tabsBgGrad2), var(--capyQAM_tabsBgGrad3));
+}
+
+.quickaccessmenu_Tab_1S76C {
+    background: var(--capyQAM_tabsBgColor) !important;
+}

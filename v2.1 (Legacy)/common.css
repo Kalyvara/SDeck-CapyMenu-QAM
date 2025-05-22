@@ -1,0 +1,300 @@
+/* ---
+CapyMenu QAM
+v2.1
+By Capybara / Kalyvara
+
+Common sheet
+--- */
+
+
+
+/* ---
+Global variables
+Animations
+--- */
+
+
+
+:root {
+    --capyQAM_toggleAnimation: none;
+}
+
+@keyframes capyQAM_animToggleGradient { /* from Colored Toggles by SuchMeme */
+    0% {
+      background-position: 0% 50%;
+      background-size: 300% 300%;
+    }
+    50% {
+      background-position: 100% 50%;
+      background-size: 300% 300%;
+    }
+    100% {
+      background-position: 0% 50%;
+      background-size: 300% 300%;
+    }
+}
+
+
+
+/* ---
+General appearence
+--- */
+
+
+
+/* Header line, footer line, whole QAM panel */
+.quickaccessmenu_HeaderAndFooterVisible_2m0zl .quickaccessmenu_Menu_1gJzx::before,
+.quickaccessmenu_HeaderAndFooterVisible_2m0zl .quickaccessmenu_Menu_1gJzx::after,
+.quickaccessmenu_QuickAccessMenu_V0cr- {
+    background: none;
+}
+
+/* Footer, header (only visible in-game) - fixes transparent background */
+.footer_BasicFooter_3T1iF.footer_QuickAccessFooter_VdbQ_, .quickaccessmenu_HeaderContainer_3k5MH {
+    background: rgba(var(--capyQAM_headerFooterBgColor), var(--capyQAM_headerFooterOpacity));
+}
+
+/* Footer, header text (only visible in-game) */
+.header_HeaderItem_2HnVd, .actionbuttonlegenditem_ActionButtonLegend_Mbyhb .actionbuttonlegenditem_ActionButtonLabel_31Jnn {
+    color: var(--capyQAM_headerFooterTextColor);
+}
+
+/* Panel separator (between side tabs and main panel), hide by default, togglable */
+.quickaccessmenu_Tabs_3Ag1w::after {
+    visibility: hidden;
+}
+
+/* Main panel on the right */
+.quickaccessmenu_PanelOuterNav_2BB6u {
+    background: rgba(var(--capyQAM_mainPanelBg), var(--capyQAM_mainPanelOpacity));
+}
+
+/* Background and shadow removal for titles */
+.quickaccessmenu_Title_34nl5 {
+    background: none;
+    box-shadow: none;
+}
+
+/* Separator between labels */
+.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorStandard_3s1Rk::after {
+    background: rgba(var(--capyQAM_separatorColor), var(--capyQAM_separatorOpacity));
+}
+.quickaccesscontrols_QuickAccessNotifications_2HCcx>div:not(:focus)+div:not(:focus):before /* within Notifications */ {
+    border-bottom: 1px solid var(--capyQAM_separatorColor);
+}
+
+/* Label in main panel */
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus, 
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin {
+    background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity));
+    animation: none;
+}
+
+/* Text in main panel */
+.quickaccesscontrols_Text_1hJkB, 
+.quickaccessmenu_Title_34nl5, 
+.gamepaddialog_FieldLabel_3b0U-, 
+.perf_Text_3gY4m,
+.quickaccesscontrols_BatteryPercentageLabel_3Rxxi,
+.gamepadslider_Icon_21uKi
+{
+    color: var(--capyQAM_mainTextColor);
+}
+
+/* Label description */
+.gamepaddialog_Field_S-_La .gamepaddialog_FieldDescription_2OJfk
+{
+    color: var(--capyQAM_mainTextColor);
+    filter: opacity(0.6);
+}
+
+/* Text in main panel (highlight) */
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepaddialog_FieldLabel_3b0U-, 
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepaddialog_FieldDescription_2OJfk,
+.gamepaddialog_Field_S-_La.gpfocuswithin .perf_Text_3gY4m,
+.gamepaddialog_Field_S-_La.gpfocuswithin .quickaccesscontrols_BatteryProjectedValue_1mTo6,
+.gamepaddialog_Field_S-_La.gpfocuswithin .quickaccesscontrols_BatteryProjectedLabel_4hS40,
+.gamepaddialog_Field_S-_La.gpfocuswithin .quickaccesscontrols_BatteryPercentageLabel_3Rxxi,
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepadslider_Icon_21uKi
+{
+    color: var(--capyQAM_hl_mainTextColor) !important;
+}
+
+/* Containers text color */
+.quickaccessmenu_Container_3DHXr.quickaccessmenu_Open_-6ESh {
+    color: var(--capyQAM_mainTextColor);
+}
+.DialogToggle_Label {
+    color: var(--capyQAM_mainTextColor);
+}
+
+/* Checkmark */
+.DialogCheckbox.Active .SVGIcon_DialogCheck path {
+    stroke: var(--capyQAM_mainTextColor);
+}
+
+/* Notification dot */
+div[style="position: absolute; top: -5px; right: -5px; height: 10px; width: 10px; background: orange; border-radius: 50%;"],
+div[style="position: absolute; top: 8px; right: 8px; height: 10px; width: 10px; background: orange; border-radius: 50%;"] {
+    background: var(--capyQAM_notifDot) !important;
+}
+
+
+
+/* ---
+Tabs list
+--- */
+
+
+
+/* Tabs column */
+.quickaccessmenu_Tabs_3Ag1w {
+    background: rgba(var(--capyQAM_tabsColmnColor), var(--capyQAM_tabsColmnOpacity));
+}
+
+/* Individual tab, background */
+.quickaccessmenu_Tab_1S76C {
+    background: rgba(var(--capyQAM_tabsBgColor), var(--capyQAM_tabsBgOpacity));
+}
+
+/* Individual tab, background (highlight, focus) */
+.quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu, .quickaccessmenu_Tab_1S76C.gpfocus.gpfocuswithin {
+    background: rgba(var(--capyQAM_hl_tabsBgColor), 255) !important;
+    animation: none;
+}
+
+/* Individual tab, icon */
+.quickaccessmenu_Tab_1S76C svg {
+    color: var(--capyQAM_tabIcon);
+}
+
+/* Individual tab, icon (highlight, focus) */
+.gpfocus.quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu::before /* highlight */, .quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu svg /* focus */ {
+    color: var(--capyQAM_hl_tabIcon) !important;
+}
+
+/* Same styling as individual tabs for the keyboard button that appears while in-game */
+.quickaccessmenu_KeyboardButton_1RN_U.gpfocus {
+    animation: none; /* removes the grayish blue overlay when hovering */
+}
+.quickaccessmenu_KeyboardButton_1RN_U {
+    background: rgba(var(--capyQAM_tabsBgColor), var(--capyQAM_tabsBgOpacity));
+}
+.quickaccessmenu_KeyboardButton_1RN_U svg {
+    color: var(--capyQAM_tabIcon);
+}
+.quickaccessmenu_KeyboardButton_1RN_U.gpfocus.gpfocuswithin {
+    background: rgba(var(--capyQAM_hl_tabsBgColor), 255);
+}
+.quickaccessmenu_KeyboardButton_1RN_U.gpfocus.gpfocuswithin svg {
+    color: var(--capyQAM_hl_tabIcon);
+}
+
+/* Border removal around the keyboard button */
+.quickaccessmenu_KeyboardButton_1RN_U {
+    border: none;
+}
+
+
+
+/* ---
+Buttons, sliders, toggles, etc.
+--- */
+
+
+
+/* Sliders */
+.gamepaddialog_ToggleRail_2JtC3::before {
+	background: var(--capyQAM_toggleColor);
+	animation: var(--capyQAM_toggleAnimation);
+}
+.gamepadslider_SliderTrack_Mq25N::before {
+    background: var(--capyQAM_toggleColor);
+	animation: var(--capyQAM_toggleAnimation);
+}
+
+/* Ticks */
+div .gamepadslider_SliderNotchTick_Fv1Ht.gamepadslider_TickActive_1gnUV {
+	background: var(--capyQAM_toggleColor);
+	animation: var(--capyQAM_toggleAnimation);
+} 
+
+/* Dropdown button */
+button.gamepaddialog_Button_1kn70.DialogButton, button.gamepaddialog_Button_1kn70.DialogButton:enabled {
+    background: var(--capyQAM_ddButtonBg) !important;
+    color: var(--capyQAM_ddButtonText) !important;
+}
+
+/* Dropdown button (highlight) */
+button.gamepaddialog_Button_1kn70.DialogButton.gpfocus, button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus {
+    background: var(--capyQAM_hl_ddButtonBg) !important;
+    color: var(--capyQAM_hl_ddButtonText) !important;
+}
+
+/* Textarea */
+.gamepadslider_EditableValue_2DXnl, .gamepadslider_FakeEditableValue_1-lyB {
+    background: var(--capyQAM_ddButtonBg);
+    color: var(--capyQAM_ddButtonText);
+    filter: opacity(0.8);
+}
+
+/* Slider tick text */
+.gamepadslider_SliderNotch_3x6ve {
+    color: var(--capyQAM_mainTextColor);
+    filter: opacity(0.6);
+}
+
+/* Slider tick text (highlight) */
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepadslider_SliderNotch_3x6ve {
+    color: var(--capyQAM_hl_mainTextColor);
+}
+
+/* Slider empty area and inactive ticks */
+.gamepaddialog_Field_S-_La .gamepadslider_SliderTrack_Mq25N, .gamepaddialog_Field_S-_La .gamepadslider_SliderNotchTick_Fv1Ht {
+    background: rgba(255, 255, 255, 0.2);
+    filter: brightness(0.9);
+}
+
+/* Slider and ticks (highlight) */
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepadslider_SliderTrack_Mq25N, .gamepaddialog_Field_S-_La.gpfocuswithin .gamepadslider_SliderNotchTick_Fv1Ht {
+    filter: brightness(0.8);
+}
+
+/* Toggle empty area */
+.gamepaddialog_ToggleRail_2JtC3 {
+    background: rgba(255, 255, 255, 0.2);
+    filter: brightness(0.7);
+}
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepaddialog_ToggleRail_2JtC3 {
+    background: rgba(255, 255, 255, 0.2);
+    filter: brightness(0.6);
+}
+
+/* Toggle highlight outline */
+.gamepaddialog_Toggle_24G4g.gpfocus:after {
+    background: rgba(255, 255, 255, 0.2);
+    filter: brightness(0.4);
+}
+
+
+
+/* ---
+Miscellaneous
+Decky plugins
+--- */
+
+
+
+/* Decky header button */
+.quickaccessmenu_Title_34nl5 .gamepaddialog_Button_1kn70
+{
+    background: var(--capyQAM_ddButtonBg) !important;
+    color: var(--capyQAM_ddButtonText) !important;
+}
+
+/* Decky header button (highlight) */
+.quickaccessmenu_Title_34nl5 .gpfocuswithin.gamepaddialog_Button_1kn70
+{
+    background: var(--capyQAM_hl_ddButtonBg) !important;
+    color: var(--capyQAM_hl_ddButtonText) !important;
+}

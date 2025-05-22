@@ -1,0 +1,51 @@
+:root {
+    --capyQAM_hl_labelBg: linear-gradient(45deg, rgba(112, 255, 205, var(--capyQAM_hl_labelOpacity)), rgba(255, 171, 189, var(--capyQAM_hl_labelOpacity)), rgba(255, 249, 196, var(--capyQAM_hl_labelOpacity)));
+}
+
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus, 
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin {
+    background: var(--capyQAM_hl_labelBg) !important;
+    animation: none;
+}
+
+/* ---
+Friends section
+Same occurrence order as in friendsTab.css
+--- */
+
+.friendsContainer .friend.gpfocus.gpfocuswithin,
+.groupHeaderContainer.gpfocuswithin .groupName.gpfocus.gpfocuswithin {
+    background: var(--capyQAM_hl_labelBg) !important;
+}
+
+/* Sort icon in Friends tab */
+.groupHeaderContainer.gpfocuswithin .SortByRecent {
+    background: var(--capyQAM_hl_labelBg) !important;
+}
+
+.friendCategoryContainer .friend.gpfocus.gpfocuswithin, /* Friends tab */
+.favoriteElement.gpfocus.gpfocuswithin, /* Favorites tab */
+.RecentMessagesTabList.FriendsListTabPanel.gpfocuswithin .friend.gpfocuswithin /* Recent chats tab */ {
+    background: var(--capyQAM_hl_labelBg) !important;
+}
+
+/* Group chats, entry highlight */
+.GroupsTabList.gpfocuswithin .ChatRoomListGroupItem.gpfocus.gpfocuswithin {
+    background: var(--capyQAM_hl_labelBg) !important;
+}
+.GroupsTabList.gpfocuswithin .ChatRoomListGroupItem.gpfocus.gpfocuswithin {
+    background: var(--capyQAM_hl_labelBg) !important;
+}
+
+.friendlistListContainer .listContentContainer .DropTarget.friendGroup.gameGroup .groupName.gpfocus.gpfocuswithin {
+    background: var(--capyQAM_hl_labelBg) !important;
+}
+
+.recentchatssteamdeck_RecentChatElement_1-Coz.gpfocus.gpfocuswithin {
+    background: var(--capyQAM_hl_labelBg) !important;
+}
+
+/* Friends status notification container, highlight */
+.notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin {
+    background: var(--capyQAM_hl_labelBg) !important;
+}

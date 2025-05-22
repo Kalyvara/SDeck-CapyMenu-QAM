@@ -1,0 +1,5 @@
+/* Panel separator type 1: regular line */
+.quickaccessmenu_Tabs_3Ag1w::after {
+    visibility: visible;
+    background: var(--capyQAM_panelSeparatorColor);
+}

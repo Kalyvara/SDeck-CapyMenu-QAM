@@ -1,0 +1,1464 @@
+{
+  "name": "CapyMenu (QAM)",
+  "author": "Capybara",
+  "version": "v2.1",
+  "manifest_version": 6,
+  "inject": {
+    "common.css": [
+      "QuickAccess"
+    ],
+    "friends.css": [
+      "QuickAccess"
+    ],
+    "notifications.css": [
+      "QuickAccess"
+    ],
+    "performance.css": [
+      "QuickAccess"
+    ],
+    "remoteplay.css": [
+      "QuickAccess"
+    ]
+  },
+  "dependencies": {},
+  "patches": {
+    "Focused tab indicator": {
+      "type": "checkbox",
+      "default": "Yes",
+      "values": {
+        "Yes": {
+          "features/bottom_border_hl_tab.css": [
+            "QuickAccess"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Rounded tabs": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {
+          "features/rounded_icons.css": [
+            "QuickAccess"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Toggles, sliders, ticks color": {
+      "type": "dropdown",
+      "default": "Blue [default]",
+      "values": {
+        "Blue [default]": {
+          "--capyQAM_toggleColor": [
+            "#2cc9c7",
+            "QuickAccess"
+          ]
+        },
+        "Green": {
+          "--capyQAM_toggleColor": [
+            "#55c96e",
+            "QuickAccess"
+          ]
+        },
+        "Yellow": {
+          "--capyQAM_toggleColor": [
+            "#f2cf5c",
+            "QuickAccess"
+          ]
+        },
+        "Red": {
+          "--capyQAM_toggleColor": [
+            "#c2021e",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_toggleColor": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Black": {
+          "--capyQAM_toggleColor": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "Pastel gradient": {
+          "presets/pastel_toggle.css": [
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {
+          "userSettings/custom_toggles.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_toggleColor1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_toggleColor2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_toggleColor3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "Notifications color": {
+      "type": "dropdown",
+      "default": "Yellow [default]",
+      "values": {
+        "Blue": {
+          "--capyQAM_notifDot": [
+            "#2cc9c7",
+            "QuickAccess"
+          ]
+        },
+        "Green": {
+          "--capyQAM_notifDot": [
+            "#55c96e",
+            "QuickAccess"
+          ]
+        },
+        "Yellow [default]": {
+          "--capyQAM_notifDot": [
+            "#f2cf5c",
+            "QuickAccess"
+          ]
+        },
+        "Red": {
+          "--capyQAM_notifDot": [
+            "#c2021e",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_notifDot": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Black": {
+          "--capyQAM_notifDot": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {}
+      },
+      "components": [
+        {
+          "name": "Notifications color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_notifDot",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Main] Background color": {
+      "type": "dropdown",
+      "default": "Grayish black [default]",
+      "values": {
+        "OLED black": {
+          "--capyQAM_mainPanelBg": [
+            "0, 0, 0",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black [default]": {
+          "--capyQAM_mainPanelBg": [
+            "17, 17, 17",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_mainPanelBg": [
+            "255, 255, 255",
+            "QuickAccess"
+          ]
+        },
+        "Pastel gradient": {
+          "presets/mainPanel_pastel.css": [
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom... (disables opacity slider)": {
+          "userSettings/custom_mainPanel.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_mainPanelGrad1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_mainPanelGrad2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_mainPanelGrad3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Main] Background opacity": {
+      "type": "slider",
+      "default": "0.9",
+      "values": {
+        "0": {
+          "--capyQAM_mainPanelOpacity": [
+            "0",
+            "QuickAccess"
+          ]
+        },
+        "0.1": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.1",
+            "QuickAccess"
+          ]
+        },
+        "0.2": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.2",
+            "QuickAccess"
+          ]
+        },
+        "0.3": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.3",
+            "QuickAccess"
+          ]
+        },
+        "0.4": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.4",
+            "QuickAccess"
+          ]
+        },
+        "0.5": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.5",
+            "QuickAccess"
+          ]
+        },
+        "0.6": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.6",
+            "QuickAccess"
+          ]
+        },
+        "0.7": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.7",
+            "QuickAccess"
+          ]
+        },
+        "0.8": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.8",
+            "QuickAccess"
+          ]
+        },
+        "0.9": {
+          "--capyQAM_mainPanelOpacity": [
+            "0.9",
+            "QuickAccess"
+          ]
+        },
+        "1": {
+          "--capyQAM_mainPanelOpacity": [
+            "1",
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "[Main] Vertical panel separator type": {
+      "type": "slider",
+      "default": "None",
+      "values": {
+        "None": {},
+        "Type 1": {
+          "features/panelSeparator_type1.css": [
+            "QuickAccess"
+          ]
+        },
+        "Type 2": {
+          "features/panelSeparator_type2.css": [
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "[Main] Vertical panel separator color": {
+      "type": "dropdown",
+      "default": "White [default]",
+      "values": {
+        "Black": {
+          "--capyQAM_panelSeparatorColor": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "White [default]": {
+          "--capyQAM_panelSeparatorColor": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {
+          "--capyQAM_panelSeparatorColor": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "[Main] Vertical panel separator color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_panelSeparatorColor",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Main] Text color": {
+      "type": "dropdown",
+      "default": "Grayish white [default]",
+      "values": {
+        "Grayish white [default]": {
+          "--capyQAM_mainTextColor": [
+            "#ccc",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_mainTextColor": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Black": {
+          "--capyQAM_mainTextColor": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {}
+      },
+      "components": [
+        {
+          "name": "[Main] Text color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_mainTextColor",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Main, highlight] Text color": {
+      "type": "dropdown",
+      "default": "White [default]",
+      "values": {
+        "White [default]": {
+          "--capyQAM_hl_mainTextColor": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Grayish white": {
+          "--capyQAM_hl_mainTextColor": [
+            "#ccc",
+            "QuickAccess"
+          ]
+        },
+        "Black": {
+          "--capyQAM_hl_mainTextColor": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {}
+      },
+      "components": [
+        {
+          "name": "[Main, highlight] Text color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_mainTextColor",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Main, highlight] Label background color": {
+      "type": "dropdown",
+      "default": "Grayish black [default]",
+      "values": {
+        "OLED black": {
+          "--capyQAM_hl_labelBg": [
+            "0, 0, 0",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black [default]": {
+          "--capyQAM_hl_labelBg": [
+            "17, 17, 17",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_hl_labelBg": [
+            "255, 255, 255",
+            "QuickAccess"
+          ]
+        },
+        "Pastel gradient": {
+          "presets/hlLabel_pastel.css": [
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom... (disables opacity slider)": {
+          "userSettings/custom_hlLabel.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_labelGrad1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_labelGrad2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_labelGrad3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Main, highlight] Label background opacity": {
+      "type": "slider",
+      "default": "1",
+      "values": {
+        "0": {
+          "--capyQAM_hl_labelOpacity": [
+            "0",
+            "QuickAccess"
+          ]
+        },
+        "0.1": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.1",
+            "QuickAccess"
+          ]
+        },
+        "0.2": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.2",
+            "QuickAccess"
+          ]
+        },
+        "0.3": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.3",
+            "QuickAccess"
+          ]
+        },
+        "0.4": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.4",
+            "QuickAccess"
+          ]
+        },
+        "0.5": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.5",
+            "QuickAccess"
+          ]
+        },
+        "0.6": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.6",
+            "QuickAccess"
+          ]
+        },
+        "0.7": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.7",
+            "QuickAccess"
+          ]
+        },
+        "0.8": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.8",
+            "QuickAccess"
+          ]
+        },
+        "0.9": {
+          "--capyQAM_hl_labelOpacity": [
+            "0.9",
+            "QuickAccess"
+          ]
+        },
+        "1": {
+          "--capyQAM_hl_labelOpacity": [
+            "1",
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "[Main] Label separator color": {
+      "type": "dropdown",
+      "default": "Black [default]",
+      "values": {
+        "Black [default]": {
+          "--capyQAM_separatorColor": [
+            "0, 0, 0",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_separatorColor": [
+            "255, 255, 255",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom... (disables opacity slider)": {
+          "userSettings/custom_separator.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "[Main] Label separator color",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_separatorColor",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Main] Label separator opacity": {
+      "type": "slider",
+      "default": "0",
+      "values": {
+        "0": {
+          "--capyQAM_separatorOpacity": [
+            "0",
+            "QuickAccess"
+          ]
+        },
+        "0.1": {
+          "--capyQAM_separatorOpacity": [
+            "0.1",
+            "QuickAccess"
+          ]
+        },
+        "0.2": {
+          "--capyQAM_separatorOpacity": [
+            "0.2",
+            "QuickAccess"
+          ]
+        },
+        "0.3": {
+          "--capyQAM_separatorOpacity": [
+            "0.3",
+            "QuickAccess"
+          ]
+        },
+        "0.4": {
+          "--capyQAM_separatorOpacity": [
+            "0.4",
+            "QuickAccess"
+          ]
+        },
+        "0.5": {
+          "--capyQAM_separatorOpacity": [
+            "0.5",
+            "QuickAccess"
+          ]
+        },
+        "0.6": {
+          "--capyQAM_separatorOpacity": [
+            "0.6",
+            "QuickAccess"
+          ]
+        },
+        "0.7": {
+          "--capyQAM_separatorOpacity": [
+            "0.7",
+            "QuickAccess"
+          ]
+        },
+        "0.8": {
+          "--capyQAM_separatorOpacity": [
+            "0.8",
+            "QuickAccess"
+          ]
+        },
+        "0.9": {
+          "--capyQAM_separatorOpacity": [
+            "0.9",
+            "QuickAccess"
+          ]
+        },
+        "1": {
+          "--capyQAM_separatorOpacity": [
+            "1",
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "[Side] Tabs column color": {
+      "type": "dropdown",
+      "default": "OLED black [default]",
+      "values": {
+        "OLED black [default]": {
+          "--capyQAM_tabsColmnColor": [
+            "0, 0, 0",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black": {
+          "--capyQAM_tabsColmnColor": [
+            "17, 17, 17",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_tabsColmnColor": [
+            "255, 255, 255",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom... (disables opacity slider)": {
+          "userSettings/custom_colTabs.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_tabsColmnGrad1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_tabsColmnGrad2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_tabsColmnGrad3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Side] Tabs column opacity": {
+      "type": "slider",
+      "default": "1",
+      "values": {
+        "0": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0",
+            "QuickAccess"
+          ]
+        },
+        "0.1": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.1",
+            "QuickAccess"
+          ]
+        },
+        "0.2": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.2",
+            "QuickAccess"
+          ]
+        },
+        "0.3": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.3",
+            "QuickAccess"
+          ]
+        },
+        "0.4": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.4",
+            "QuickAccess"
+          ]
+        },
+        "0.5": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.5",
+            "QuickAccess"
+          ]
+        },
+        "0.6": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.6",
+            "QuickAccess"
+          ]
+        },
+        "0.7": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.7",
+            "QuickAccess"
+          ]
+        },
+        "0.8": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.8",
+            "QuickAccess"
+          ]
+        },
+        "0.9": {
+          "--capyQAM_tabsColmnOpacity": [
+            "0.9",
+            "QuickAccess"
+          ]
+        },
+        "1": {
+          "--capyQAM_tabsColmnOpacity": [
+            "1",
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "[Side] Tab background color": {
+      "type": "dropdown",
+      "default": "OLED black [default]",
+      "values": {
+        "OLED black [default]": {
+          "--capyQAM_tabsBgColor": [
+            "0, 0, 0",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black": {
+          "--capyQAM_tabsBgColor": [
+            "17, 17, 17",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_tabsBgColor": [
+            "255, 255, 255",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom... (disables opacity slider)": {
+          "userSettings/custom_bgTabs.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_tabsBgGrad1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_tabsBgGrad2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_tabsBgGrad3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Side] Tab background opacity": {
+      "type": "slider",
+      "default": "1",
+      "values": {
+        "0": {
+          "--capyQAM_tabsBgOpacity": [
+            "0",
+            "QuickAccess"
+          ]
+        },
+        "0.1": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.1",
+            "QuickAccess"
+          ]
+        },
+        "0.2": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.2",
+            "QuickAccess"
+          ]
+        },
+        "0.3": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.3",
+            "QuickAccess"
+          ]
+        },
+        "0.4": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.4",
+            "QuickAccess"
+          ]
+        },
+        "0.5": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.5",
+            "QuickAccess"
+          ]
+        },
+        "0.6": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.6",
+            "QuickAccess"
+          ]
+        },
+        "0.7": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.7",
+            "QuickAccess"
+          ]
+        },
+        "0.8": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.8",
+            "QuickAccess"
+          ]
+        },
+        "0.9": {
+          "--capyQAM_tabsBgOpacity": [
+            "0.9",
+            "QuickAccess"
+          ]
+        },
+        "1": {
+          "--capyQAM_tabsBgOpacity": [
+            "1",
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "[Side] Tab icon color": {
+      "type": "dropdown",
+      "default": "White [default]",
+      "values": {
+        "White [default]": {
+          "--capyQAM_tabIcon": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black": {
+          "--capyQAM_tabIcon": [
+            "#171717",
+            "QuickAccess"
+          ]
+        },
+        "Black": {
+          "--capyQAM_tabIcon": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {}
+      },
+      "components": [
+        {
+          "name": "[Side] Tab icon color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_tabIcon",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Side, highlight] Tab background color": {
+      "type": "dropdown",
+      "default": "Grayish black [default]",
+      "values": {
+        "OLED black": {
+          "--capyQAM_hl_tabsBgColor": [
+            "0, 0, 0",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black [default]": {
+          "--capyQAM_hl_tabsBgColor": [
+            "17, 17, 17",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_hl_tabsBgColor": [
+            "255, 255, 255",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {
+          "userSettings/custom_hlBgTabs.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_tabsBgGrad1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_tabsBgGrad2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_tabsBgGrad3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Side, highlight] Tab icon color": {
+      "type": "dropdown",
+      "default": "White [default]",
+      "values": {
+        "White [default]": {
+          "--capyQAM_hl_tabIcon": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black": {
+          "--capyQAM_hl_tabIcon": [
+            "#171717",
+            "QuickAccess"
+          ]
+        },
+        "Black": {
+          "--capyQAM_hl_tabIcon": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {}
+      },
+      "components": [
+        {
+          "name": "[Side, highlight] Tab icon color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_tabIcon",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Buttons] Background color": {
+      "type": "dropdown",
+      "default": "Grayish black [default]",
+      "values": {
+        "OLED black": {
+          "--capyQAM_ddButtonBg": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black [default]": {
+          "--capyQAM_ddButtonBg": [
+            "#171717",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_ddButtonBg": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Pastel gradient": {
+          "presets/buttons_pastel.css": [
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {
+          "userSettings/custom_buttons.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_ddButtonGrad1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_ddButtonGrad2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_ddButtonGrad3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Buttons] Text color": {
+      "type": "dropdown",
+      "default": "Grayish white [default]",
+      "values": {
+        "Grayish white [default]": {
+          "--capyQAM_ddButtonText": [
+            "#ccc",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_ddButtonText": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Black": {
+          "--capyQAM_ddButtonText": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {}
+      },
+      "components": [
+        {
+          "name": "[Buttons] Text color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_ddButtonText",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Buttons, highlight] Background color": {
+      "type": "dropdown",
+      "default": "White [default]",
+      "values": {
+        "White [default]": {
+          "--capyQAM_hl_ddButtonBg": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "OLED black": {
+          "--capyQAM_hl_ddButtonBg": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "Grayish black": {
+          "--capyQAM_hl_ddButtonBg": [
+            "#171717",
+            "QuickAccess"
+          ]
+        },
+        "Pastel gradient": {
+          "presets/hlButtons_pastel.css": [
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {
+          "userSettings/custom_hlButtons.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_ddButtonBgGrad1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_ddButtonBgGrad2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_ddButtonBgGrad3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[Buttons, highlight] Text color": {
+      "type": "dropdown",
+      "default": "Black [default]",
+      "values": {
+        "Black [default]": {
+          "--capyQAM_hl_ddButtonText": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_hl_ddButtonText": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Grayish white": {
+          "--capyQAM_hl_ddButtonText": [
+            "#ccc",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {}
+      },
+      "components": [
+        {
+          "name": "[Buttons, highlight] Text color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_hl_ddButtonText",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[In-game] Header and footer background color": {
+      "type": "dropdown",
+      "default": "OLED black [default]",
+      "values": {
+        "OLED black [default]": {
+          "--capyQAM_headerFooterBgColor": [
+            "0, 0, 0",
+            "QuickAccess"
+          ]
+        },
+        "White": {
+          "--capyQAM_headerFooterBgColor": [
+            "255, 255, 255",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom... (disables opacity slider)": {
+          "userSettings/custom_headerFooter.css": [
+            "QuickAccess"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Gradient color 1",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_headFootGrad1",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 2",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_headFootGrad2",
+          "tabs": [
+            "QuickAccess"
+          ]
+        },
+        {
+          "name": "Gradient color 3",
+          "type": "color-picker",
+          "on": "⚙️ Custom... (disables opacity slider)",
+          "default": "#34e8ebFF",
+          "css_variable": "capyQAM_headFootGrad3",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "[In-game] Header and footer background opacity": {
+      "type": "slider",
+      "default": "1",
+      "values": {
+        "0": {
+          "--capyQAM_headerFooterOpacity": [
+            "0",
+            "QuickAccess"
+          ]
+        },
+        "0.1": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.1",
+            "QuickAccess"
+          ]
+        },
+        "0.2": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.2",
+            "QuickAccess"
+          ]
+        },
+        "0.3": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.3",
+            "QuickAccess"
+          ]
+        },
+        "0.4": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.4",
+            "QuickAccess"
+          ]
+        },
+        "0.5": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.5",
+            "QuickAccess"
+          ]
+        },
+        "0.6": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.6",
+            "QuickAccess"
+          ]
+        },
+        "0.7": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.7",
+            "QuickAccess"
+          ]
+        },
+        "0.8": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.8",
+            "QuickAccess"
+          ]
+        },
+        "0.9": {
+          "--capyQAM_headerFooterOpacity": [
+            "0.9",
+            "QuickAccess"
+          ]
+        },
+        "1": {
+          "--capyQAM_headerFooterOpacity": [
+            "1",
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "[In-game] Header and footer text color": {
+      "type": "dropdown",
+      "default": "White [default]",
+      "values": {
+        "White [default]": {
+          "--capyQAM_headerFooterTextColor": [
+            "#fff",
+            "QuickAccess"
+          ]
+        },
+        "Black": {
+          "--capyQAM_headerFooterTextColor": [
+            "#000",
+            "QuickAccess"
+          ]
+        },
+        "⚙️ Custom...": {}
+      },
+      "components": [
+        {
+          "name": "[In-game] Header and footer text color",
+          "type": "color-picker",
+          "on": "⚙️ Custom...",
+          "default": "#34e8ebFF",
+          "css_variable": "--capyQAM_headerFooterTextColor",
+          "tabs": [
+            "QuickAccess"
+          ]
+        }
+      ]
+    }
+  },
+  "id": "726ddfcd-47a0-4f71-81ac-c276936c68cb"
+}

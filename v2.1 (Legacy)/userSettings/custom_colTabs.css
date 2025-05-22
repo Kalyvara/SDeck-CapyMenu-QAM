@@ -1,0 +1,7 @@
+:root {
+    --capyQAM_tabsColmnColor: linear-gradient(45deg, var(--capyQAM_tabsColmnGrad1), var(--capyQAM_tabsColmnGrad2), var(--capyQAM_tabsColmnGrad3));
+}
+
+.quickaccessmenu_Tabs_3Ag1w {
+    background: var(--capyQAM_tabsColmnColor) !important;
+}
