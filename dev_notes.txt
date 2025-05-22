@@ -26,13 +26,13 @@ All parts are always injected in all circumstances, otherwise the theming is not
 This should (or so I hope) ensure consistent compatibility between user-defined settings and CSS rules that are being injected.
 
 Practical example:
-    The "Halos" flavor of contentPanel background requires the ../dependencies/anim_5colorGrad-bg.css animation "dependency". So, whenever the user sets contentPanel background to "Halos", ../parts/contentPanel/bg-halos.css comes pre-injected together with its dependency ../dependencies/anim_5colorGrad-bg.css in theme.json.
+    The "Halos" flavor of contentPanel background requires the dependencies/anim_5colorGrad-bg.css animation "dependency". So, whenever the user sets contentPanel background to "Halos", parts/contentPanel/bg-halos.css comes pre-injected together with its dependency parts/dependencies/anim_5colorGrad-bg.css in theme.json.
 
-    In this example, ../dependencies/anim_5colorGrad-bg.css grants access to the CSS @keyframes. Those @keyframes are designed to be compatible with the radial-gradients defined in ../parts/contentPanel/bg-halos.css, which in turn defines as a whole the "Halos" flavor of contentPanel.
+    In this example, parts/dependencies/anim_5colorGrad-bg.css grants access to the CSS @keyframes. Those @keyframes are designed to be compatible with the radial-gradients defined in parts/contentPanel/bg-halos.css, which in turn defines as a whole the "Halos" flavor of contentPanel.
     
     The specifics of the animation rule must be specified within the part flavor file. It's pretty much like importing a library.
 
-Note that dependencies may expect parameters (e.g. --capyQam-AnimParam-colorChange-c1/c2/c3/c4/c5 in ../dependencies/anim_colorChange-bg.css), which are then to be specified also within the part flavor file.
+Note that dependencies may expect parameters (e.g. --capyQam-AnimParam-colorChange-c1/c2/c3/c4/c5 in parts/dependencies/anim_colorChange-bg.css), which are then to be specified also within the part flavor file.
 
 Typically (but not exclusively), dependencies are animations. Flavors that use togglable animations MUST ALWAYS include "--capyQam-tweakOn-xxx-anim"-labeled variables. More details in the next section.
 
