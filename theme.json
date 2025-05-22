@@ -623,8 +623,7 @@
                         "parts/dependencies/anim_5colorGrad-bg.css": []
                     },
                     "Stripes": {
-                        "parts/itemHighlight/bg-stripes.css": [],
-                        "parts/dependencies/anim_jitter-bg.css": []
+                        "parts/itemHighlight/bg-stripes.css": []
                     }
                 },
               "components": [
